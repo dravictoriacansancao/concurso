@@ -7,13 +7,13 @@
 - ✅ A posse só acontece depois de 20/05/2027 (resultado final), ou seja, **a partir de jun/2027**.
 - ❌ O edital **não aceita experiência** no lugar da especialização. Sua atuação na área ajuda na prova, mas não cumpre o requisito.
 
-## ✅ Solução escolhida: Facuvale · Pós em Perícia Médica (360 h) · ~R$ 400
+## ✅ Solução escolhida: Faculdade Iguaçu · Pós em Perícia Médica · ~R$ 240–360 (reserva: Facuvale, ~R$ 400)
 Comparação completa com 8 cursos: [`cursos.md`](cursos.md).
 
 **Matricular já (outubro/2026)**, e não esperar o gabarito:
-- O custo é tão baixo (~R$ 400) que esperar o gabarito para economizar não compensa.
+- O custo é tão baixo (~R$ 240–360) que esperar o gabarito para economizar não compensa.
 - **As disciplinas da pós são material de estudo para a prova**: Conhecimentos Profissionais (perícia) vale 39 pontos.
-- Com mínimo de 3 meses, a pós termina em **jan/2027** e o certificado fica pronto bem antes da posse (≥ jun/2027).
+- Com mínimo de 4 meses, a pós termina em **fev/2027** e o certificado fica pronto bem antes da posse (≥ jun/2027).
 - Até 01/11, use o curso só como leitura. Deixe as avaliações do curso para depois da prova, para não roubar tempo do cronograma.
 
 ### Critérios que a pós cumpre / precisa confirmar

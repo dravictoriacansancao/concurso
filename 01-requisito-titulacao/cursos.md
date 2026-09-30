@@ -4,8 +4,9 @@ Critérios do edital: especialização lato sensu **em perícia médica**, ≥ 3
 
 | # | Instituição / curso | Preço total aprox. | Carga | Prazo mínimo | Situação |
 |---|---|---|---|---|---|
-| 🥇 | **Facuvale: "Perícia Médica (360H)"** | **~R$ 400 no Pix ou 12x ~R$ 37–42** ¹ | 360 h | **3 meses** | ✅ **ESCOLHIDA** |
-| 2 | EAD Inside: "Perícia Médica" (intermediária; o certificado sai por faculdade parceira) | não divulgado | 360 h | 3 meses | Plano B, se a Facuvale falhar |
+| 🥇 | **Faculdade Iguaçu: "Perícia Médica"** (pós a distância) | **12x R$ 19,90 a 29,90 = ~R$ 240 a 360** ² | 360 h | **4 meses** | ✅ **MAIS BARATA** |
+| 🥈 | Facuvale: "Perícia Médica (360H)" | ~R$ 400 no Pix ou 12x ~R$ 37–42 ¹ | 360 h | 3 meses | Plano B (1 mês mais rápida) |
+| 3 | EAD Inside: "Perícia Médica" (intermediária; o certificado sai por faculdade parceira) | não divulgado | 360 h | 3 meses | Plano B, se a Facuvale falhar |
 | 3 | Unyleya: "Perícia Médica" | a partir de ~R$ 2.125 | 480 h | 12 meses | Cara e com prazo apertado |
 | 4 | UniBF: "Estudos em Medicina Legal e Perícia Médica" | ~R$ 2.999 | 1.100 h | 8 meses | O nome "Estudos em…" pode gerar questionamento |
 | 5 | Sanar Pós: "Perícias Médicas" | 20x R$ 513,62 ≈ R$ 10.272 | 360 h | 7 + 3 meses | Cara |
@@ -13,9 +14,14 @@ Critérios do edital: especialização lato sensu **em perícia médica**, ≥ 3
 | 7 | Uninassau: "Especialização em Perícias Médicas" | ~R$ 15.870 (24x R$ 661,28) | — | — | Cara |
 | 8 | Cenbrap: "Perícias Médicas EaD" | R$ 390 + 15x R$ 1.290 ≈ R$ 19.740 | — | 12 meses | Cara |
 
+² Faixa promocional da Faculdade Iguaçu (a parcela varia conforme a promoção vigente); a pós tem conclusão de 4 a 18 meses e TCC opcional. Confirmar na página: https://faculdadeiguacu.edu.br/cursos/pos-graduacao-a-distancia
+
 ¹ Preço padrão dos cursos de 360 h da área de saúde da Facuvale, tirado de resultados de busca. **Confirmar o valor exato na página do curso antes de pagar.**
 
-## Por que a Facuvale
+## Por que a Faculdade Iguaçu (e a Facuvale como reserva)
+- A Iguaçu é a **mais barata** encontrada e, com matrícula em out/2026, termina em **fev/2027**, bem antes da posse.
+
+Sobre a Facuvale:
 - O nome do curso é **literalmente "Perícia Médica"** e bate com o texto do edital ("especialização em perícia médica").
 - Credenciamento EAD pelo MEC: **Portaria nº 198, de 07/03/2024** (Faculdade Vale do Aço, Coronel Fabriciano/MG; mesma rede da Facuminas).
 - Com mínimo de 3 meses, uma matrícula em outubro ou novembro de 2026 termina em **jan–fev/2027**, com folga de 4 meses antes da posse.
