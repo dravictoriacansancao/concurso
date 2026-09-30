@@ -5,7 +5,7 @@ Critérios do edital: especialização lato sensu **em perícia médica**, ≥ 3
 | # | Instituição / curso | Preço total aprox. | Carga | Prazo mínimo | Situação |
 |---|---|---|---|---|---|
 | ? | Faculdade Iguaçu: "Perícia Médica" | **R$ 2.500 à vista (preço real informado pela Victoria)** ² | 360 h | 4 meses | ❌ A estimativa da busca estava errada |
-| 🥇? | Facuvale: "Perícia Médica (360H)" | ~R$ 400 no Pix (estimativa, **cotar**) ¹ | 360 h | 3 meses | Próxima a cotar |
+| 🥇 | **Facuvale: "Perícia Médica (360H)"**, com certificação pela **Faculdade Iguaçu** (Portaria EAD nº 1.640/2019) | **12x R$ 41,67 = R$ 500** (preço visto na página em 30/09/2026; perguntar o valor no Pix) | 360 h | 3 meses | ✅ **ESCOLHIDA** |
 | 3 | EAD Inside: "Perícia Médica" (intermediária; o certificado sai por faculdade parceira) | não divulgado | 360 h | 3 meses | Plano B, se a Facuvale falhar |
 | 3 | Unyleya: "Perícia Médica" | a partir de ~R$ 2.125 | 480 h | 12 meses | Cara e com prazo apertado |
 | 4 | UniBF: "Estudos em Medicina Legal e Perícia Médica" | ~R$ 2.999 | 1.100 h | 8 meses | O nome "Estudos em…" pode gerar questionamento |
@@ -23,12 +23,14 @@ Critérios do edital: especialização lato sensu **em perícia médica**, ≥ 3
 
 Sobre a Facuvale:
 - O nome do curso é **literalmente "Perícia Médica"** e bate com o texto do edital ("especialização em perícia médica").
-- Credenciamento EAD pelo MEC: **Portaria nº 198, de 07/03/2024** (Faculdade Vale do Aço, Coronel Fabriciano/MG; mesma rede da Facuminas).
+- A página do curso informa a **Portaria de Credenciamento EAD nº 1.640, de 19/09/2019**, que é o credenciamento da **Faculdade Iguaçu**. A Facuvale funciona como polo/parceira, então o certificado deve sair pela Iguaçu, a mesma faculdade que cobra R$ 2.500 na venda direta.
+- ⚠️ **Há reclamações no Reclame Aqui sobre atraso na entrega de certificados** (Facuvale/Faculdade de Minas). Mitigação: concluir o quanto antes (jan/2027) para ter uns 5 meses de folga até a posse, e cobrar a emissão logo após a conclusão.
 - Com mínimo de 3 meses, uma matrícula em outubro ou novembro de 2026 termina em **jan–fev/2027**, com folga de 4 meses antes da posse.
 - Custa **~25 a 50x menos** que as pós "de grife" (Sanar, Cenbrap, Uninassau). Para o edital, as duas valem igual.
 
 ## Checklist antes de pagar
-- [ ] Conferir no **e-MEC** (emec.mec.gov.br → Consulta Avançada → "Faculdade Vale do Aço"): credenciamento **EAD ativo**
+- [ ] Conferir no **e-MEC** (emec.mec.gov.br → Consulta Avançada → "Faculdade Iguaçu"): credenciamento **EAD ativo**
+- [ ] Perguntar: **qual instituição assina o certificado?** (resposta esperada: Faculdade Iguaçu)
 - [ ] Página do curso: https://www.facuvale.com.br/pos-graduacao/saude-e-bem-estar/pericia-medica-360h-21545 → confirmar preço, 360 h e duração mínima
 - [ ] Perguntar por escrito (WhatsApp/e-mail) e guardar a resposta:
   - O certificado sai com o nome **"Especialização em Perícia Médica"** e histórico?
