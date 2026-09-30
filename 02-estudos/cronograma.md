@@ -5,7 +5,7 @@ Questões: filtrar por banca **Igeduc** (QConcursos/TEC) e usar provas anteriore
 
 ## Semana 1 · 30/09–06/10 · Inscrição + SUS base
 - [ ] **Fazer inscrição e pagar boleto (até 06–07/10)**
-- [ ] Enviar e-mail de esclarecimento para a Igeduc (ver `01-requisito-titulacao`)
+- [ ] Matricular na pós Facuvale (ver `01-requisito-titulacao/cursos.md`) e usar os módulos de perícia como material
 - [ ] Diagnóstico: 10 questões de cada disciplina → anotar % de acerto
 - [ ] CF/88 arts. 196–200 + Lei 8.080 (1ª leitura integral)
 - [ ] Lei 8.142 + 40 questões de SUS
@@ -35,4 +35,4 @@ Questões: filtrar por banca **Igeduc** (QConcursos/TEC) e usar provas anteriore
 - [ ] **30/10 ou 31/10: simulado 2** às 14h
 - [ ] 31/10: revisão leve · separar documento com foto + caneta preta/azul transparente · checar o local no CCI
 - [ ] **01/11: chegar antes de 13h45** (portões fecham 13h45; prova das 14h às 18h)
-- [ ] **02/11: corrigir pelo gabarito preliminar → decidir a matrícula na pós**
+- [ ] **02/11: corrigir pelo gabarito preliminar** → retomar as avaliações da pós
