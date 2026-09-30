@@ -1,45 +1,56 @@
-# Requisito de titulação — caminho mais barato
+# Requisito de titulação — solução mais barata
 
-Situação: médica, **já atua em perícia**, **sem pós-graduação**. Quer a solução de menor custo que garanta a posse.
+## O que o edital exige
+> "especialização em perícia médica [...] e habilitação específica para atuar como médico perito, **no momento da posse**."
 
-## 1. As 3 perguntas do edital que decidem tudo
-| # | Pergunta | Por quê |
-|---|---|---|
-| A | O texto pede **"pós-graduação"** (lato sensu), **"residência OU título de especialista"**, ou **"RQE"**? | Pós lato sensu **não gera RQE**. Se pedir RQE/especialista, pós comum não serve. |
-| B | Aceita **experiência comprovada** como alternativa? | Se aceitar, o custo pode ser **zero**. |
-| C | **Quando** se comprova? (inscrição × posse) | Quase sempre é na **posse** → dá tempo de concluir algo depois da prova. |
+- ✅ **Nada precisa ser comprovado na inscrição nem na prova.** Você pode se inscrever e fazer a prova sem pós.
+- ✅ A posse só acontece depois de 20/05/2027 (resultado final), ou seja, **a partir de jun/2027**.
+- ❌ O edital **não aceita experiência** no lugar da especialização. Sua atuação na área ajuda na prova, mas não cumpre o requisito.
 
-## 2. Caminhos (do mais barato ao mais caro)
+## Solução escolhida: pós lato sensu EAD em Perícia Médica, com matrícula condicionada ao gabarito
 
-| Caminho | Custo estimado* | Prazo | Serve se o edital pedir… | Observação |
-|---|---|---|---|---|
-| **0. Experiência já existente** | R$ 0 | imediato | experiência como alternativa | Juntar declarações/portarias/contracheques da atuação atual. |
-| **1. Prova de título de especialista** em Medicina Legal e Perícia Médica (via ABMLPM/AMB) | taxa da prova (algumas centenas a poucos mil R$) | depende do calendário anual da prova | título de especialista / RQE / "pós ou especialização" | Gera **RQE** (vale mais que pós). Exige comprovar tempo de atuação na área — **conferir regra vigente e data da próxima prova**. Pode ser o melhor custo-benefício para quem já atua. |
-| **2. Pós lato sensu EAD** (Perícia Médica / Medicina Legal e Perícias) | ~R$ 2 mil–8 mil no total (parcelas baixas) | 6–12 meses | "pós-graduação" / "especialização" genérica | Instituição **credenciada no MEC** (conferir no e-MEC), mínimo **360 h**, certificado (ou declaração de conclusão, se o edital aceitar) **antes da posse**. |
-| **3. Residência médica** | bolsa (sem custo, mas 3 anos) | 3 anos | residência | Inviável para este concurso. |
+**Estratégia de custo mínimo:** não gastar nada com pós antes de saber se a nota foi suficiente.
 
-\* Faixas de mercado para orientar a busca — confirmar preços reais na hora de escolher.
-
-## 3. Regra de decisão
 ```
-Edital aceita experiência?  ── sim ──▶ Caminho 0 (custo zero). Fim.
-        │ não
-        ▼
-Pede título/RQE?  ── sim ──▶ Caminho 1 (prova de título). Checar se a data da prova sai antes da posse.
-        │ não (pede só "pós-graduação")
-        ▼
-Caminho 2: pós EAD MEC mais barata que termine antes da posse estimada.
-        + em paralelo, avaliar Caminho 1 (RQE vale para títulos e carreira futura).
+01/11  Prova
+02/11  Gabarito preliminar → corrigir a própria prova
+         │
+         ├── nota < 70  ──▶ não matricula. Custo da pós: R$ 0.
+         │
+         └── nota ≥ 70  ──▶ matricula até ~05/11 numa pós EAD com conclusão em ≤ 6 meses
+                             → conclusão até abr/2027 → certificado até mai/2027
+                             → pronto antes da posse (≥ jun/2027) ✅
 ```
 
-## 4. Armadilhas
-- ❌ "Pós em 30/60 dias" ou instituição sem credenciamento MEC → certificado pode ser recusado na posse.
-- ❌ Curso livre / aperfeiçoamento (< 360 h) ≠ pós-graduação.
-- ⚠️ Se só houver **declaração de conclusão** (sem certificado), conferir se o edital aceita.
-- ⚠️ Se a pós também contar na **prova de títulos**, iniciar logo pode render pontos, além de cumprir o requisito.
+### Critérios obrigatórios da pós
+- [ ] Instituição **credenciada no MEC** (conferir no e-MEC: emec.mec.gov.br)
+- [ ] Nome do curso contém **"Perícia Médica"** (ex.: "Perícia Médica", "Medicina Legal e Perícia Médica"), para bater com o texto do edital
+- [ ] Carga horária **≥ 360 h**
+- [ ] Conclusão em **≤ 6 meses** e **prazo de emissão do certificado** por escrito (a posse exige original, e protocolo não vale)
+- [ ] Menor preço total entre as que cumprem tudo acima (comparar pelo menos 3)
 
-## 5. Próximos passos
-- [ ] Colocar o edital em `00-edital/` e preencher A, B e C acima.
-- [ ] Estimar a data da posse (prova + resultado + homologação).
-- [ ] Levantar 3 pós EAD credenciadas no MEC e comparar preço × prazo.
-- [ ] Conferir as regras atuais e o calendário da prova de título da ABMLPM.
+### Por que não os outros caminhos
+| Caminho | Por que fica de fora (agora) |
+|---|---|
+| Experiência | O edital não aceita |
+| Título de especialista (prova da ABMLPM/AMB → RQE) | Também cumpriria e vale mais para a carreira, mas depende do calendário anual e das regras de elegibilidade. É um plano paralelo, não o principal |
+| Residência | 3 anos |
+
+## ⚠️ Ponto em aberto: "habilitação específica para atuar como médico perito"
+O termo é vago: pode ser só a própria especialização/CRM ou pode significar RQE. O prazo de impugnação já passou.
+**Ação:** mandar um e-mail para **concursos@igeduc.org.br** (e para a Prefeitura), guardando a resposta:
+
+> Prezados, sou candidata ao cargo de Médico Perito Clínico Geral (Edital 001/2026 – Porto Calvo/AL). Solicito esclarecimento sobre o requisito de posse: (1) certificado de especialização lato sensu em Perícia Médica (≥ 360 h, instituição credenciada no MEC) atende ao requisito "especialização em perícia médica"? (2) O que se entende por "habilitação específica para atuar como médico perito"? É exigido RQE ou outro documento além do CRM e da especialização? Atenciosamente, [nome, CPF, nº de inscrição].
+
+Se a resposta disser que é exigido RQE → mudar para o caminho da prova de título e rever os prazos.
+
+## Títulos: impacto da falta de pós
+- Até 08/12/2026 você não terá título concluído → **0 ponto em títulos** (máx. 1 pt para uma especialização).
+- A nota de títulos é o **2º critério de desempate**. Numa vaga única, isso importa: a compensação vem da prova.
+- O 3º critério de desempate é a **nota em Conhecimentos Profissionais**. Essa é a disciplina para gabaritar.
+
+## Checklist
+- [ ] **Inscrição até 06/10 + boleto até 07/10**
+- [ ] E-mail de esclarecimento para a Igeduc
+- [ ] Pré-selecionar 3 pós EAD (e-MEC + preço + prazo + certificado) **antes** da prova, para matricular rápido em 02/11
+- [ ] 02/11: corrigir pelo gabarito → decidir a matrícula
