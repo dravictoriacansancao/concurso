@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+# PDFs do PCI Concursos trazem marca d'água com o IP de quem baixou: ficam só na máquina
+data/raw_outras/FUNDATEC_*
+data/raw_outras/INSTITUTO-UNIFIL_*
+data/raw_outras/UFG_*

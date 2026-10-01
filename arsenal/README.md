@@ -9,6 +9,8 @@ simulador offline, matriz de prioridade e plano de estudo.
 - Abas: **Treino** (filtros e correção comentada) · **Simulado** (prova completa de 4 h) · **Revisão** (erradas
   voltam em 1/3/7/14 dias) · **Painel** (pontos projetados e onde você mais perde ponto) · **Treino de chute** ·
   **Progresso** (copiar/colar para passar de um aparelho a outro).
+- No Treino, o filtro de origem separa: inéditas · provas reais IGEDUC · **provas de perito (outras bancas)**.
+  O Treino de chute usa só questões originais da IGEDUC.
 - Para estudar no papel: `simulador/banco.pdf`. Para o Anki: importe `simulador/flashcards.csv` (separador `;`).
 
 ## 2. Gerar mais questões de um tema
@@ -35,6 +37,9 @@ Isso recalcula `data/matriz.csv`, o banco e o simulador.
 | `data/banco.jsonl` | Banco final (letras sorteadas, comentários, fundamento, pegadinha) |
 | `data/matriz.csv` | Prioridade por tema |
 | `relatorio/plano-estudo.md` | Cronograma 01/10–31/10 |
-| `relatorio/raio-x.md` | Estatística da banca (bloqueada: ver como destravar) |
+| `relatorio/raio-x.md` | Raio-X da IGEDUC: 21 concursos, 1.980 questões reais |
+| `relatorio/pericia-igeduc.md` | Os 35 itens de perícia que a IGEDUC já cobrou |
+| `relatorio/outras-bancas.md` | 7 provas de perito de outras bancas: o que cobram (279 questões no edital) |
+| `data/historico.jsonl` · `data/outras.jsonl` | Questões reais (IGEDUC / outras bancas) classificadas |
 | `LOG.md` | O que foi feito, números e pendências |
 | `PROMPT.md` | Prompt original |

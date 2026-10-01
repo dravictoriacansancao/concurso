@@ -178,9 +178,10 @@ function badge() {
 function qHTML(q, opts) {
   opts = opts || {};
   var h = "<div class=\"qhead\"><span class=\"tag disc\">" + esc(q.disciplina) + "</span><span>" + esc(q.tema) + "</span>" +
-    "<span class=\"tag\">" + q.id + "</span>" + (q.real ? "<span class=\"tag warn\">prova real · " + esc(q.origem) + "</span>" : "<span class=\"tag\">nível " + q.dificuldade + "</span>") +
+    "<span class=\"tag\">" + q.id + "</span>" + (q.real ? "<span class=\"tag warn\">" + (q.banca === "IGEDUC" ? "prova real IGEDUC" : "outra banca · " + esc(q.banca)) + " · " + esc(q.origem) + "</span>" : "<span class=\"tag\">nível " + q.dificuldade + "</span>") +
     (q.verificar ? "<span class=\"tag warn\" title=\"Conferir a redação vigente da norma\">conferir lei</span>" : "") + "</div>";
   if (q.texto && TEXTOS[q.texto] && !opts.semEnunciado) h += "<div class=\"texto\">" + esc(TEXTOS[q.texto]) + "</div>";
+  if (q.contexto && !opts.semEnunciado) h += "<div class=\"texto\">" + esc(q.contexto) + "</div>";
   if (!opts.semEnunciado) h += "<div class=\"enun\">" + esc(q.enunciado) + "</div>";
   h += "<div class=\"alts\">";
   (q.alternativas.V ? ["V", "F"] : Object.keys(q.alternativas).sort()).forEach(function (L) {
@@ -199,7 +200,8 @@ function reveal(box, q, chosen, opts) {
   var ok = chosen === q.gabarito;
   box.insertAdjacentHTML("beforeend",
     "<div class=\"expl\"><div class=\"verdict " + (ok ? "ok" : "bad") + "\">" + (chosen ? (ok ? "Acertou." : "Errou. Gabarito: " + q.gabarito) : "Gabarito: " + q.gabarito) + "</div>" +
-    (q.real ? "<div class=\"muted\">Questão real da IGEDUC (" + esc(q.origem) + "). Gabarito definitivo oficial; a banca não publica comentário.</div></div>" :
+    (q.real ? "<div class=\"muted\">" + (q.banca === "IGEDUC" ? "Questão real da IGEDUC (" + esc(q.origem) + "). Gabarito definitivo oficial; a banca não publica comentário." :
+      "Prova de perito de outra banca: " + esc(q.banca) + " (" + esc(q.origem) + "). Serve para treinar o conteúdo de perícia; o estilo da IGEDUC é o das questões reais IGEDUC." + (q.alternativas.C === "Certo" ? " Formato Cebraspe: julgue o item como Certo ou Errado." : "")) + "</div></div>" :
     "<div><b>Por que " + q.gabarito + ".</b> " + esc(q.comentario_correta) + "</div>" +
     "<div><b>Pegadinha treinada.</b> " + esc(q.pegadinha) + "</div>" +
     "<div class=\"muted\">Fundamento: " + esc(q.fundamento) + (q.verificar ? " · conferir a redação vigente no Planalto" : "") + "</div></div>"));
@@ -207,17 +209,24 @@ function reveal(box, q, chosen, opts) {
 }
 
 /* ---------- TREINO ---------- */
+function origemOk(q, o) {
+  if (!o) return true;
+  if (o === "ineditas") return !q.real;
+  if (o === "reais") return q.real && q.banca === "IGEDUC";
+  if (o === "outras") return q.real && q.banca !== "IGEDUC";
+  return true;
+}
 var T = { disc: "", tema: "", dif: "", origem: "", erradas: false, fila: [], i: 0, t0: 0 };
 function treinoFila() {
   T.fila = shuffle(BANCO.filter(function (q) {
-    return (!T.origem || (T.origem === "reais") === !!q.real) && (!T.disc || q.disciplina === T.disc) && (!T.tema || q.tema === T.tema) && (!T.dif || String(q.dificuldade) === T.dif) && (!T.erradas || lastWrong(q.id));
+    return origemOk(q, T.origem) && (!T.disc || q.disciplina === T.disc) && (!T.tema || q.tema === T.tema) && (!T.dif || String(q.dificuldade) === T.dif) && (!T.erradas || lastWrong(q.id));
   })); T.i = 0;
 }
 function viewTreino() {
-  var temas = BANCO.filter(function (q) { return !T.disc || q.disciplina === T.disc; }).map(function (q) { return q.tema; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
+  var temas = BANCO.filter(function (q) { return origemOk(q, T.origem) && (!T.disc || q.disciplina === T.disc); }).map(function (q) { return q.tema; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
   var app = $("#app");
   app.innerHTML =
-    "<div class=\"bar\"><select id=\"fOri\" aria-label=\"Origem\"><option value=\"\">Inéditas + provas reais</option><option value=\"ineditas\"" + (T.origem === "ineditas" ? " selected" : "") + ">Só inéditas</option><option value=\"reais\"" + (T.origem === "reais" ? " selected" : "") + ">Só provas reais IGEDUC</option></select>" +
+    "<div class=\"bar\"><select id=\"fOri\" aria-label=\"Origem\"><option value=\"\">Inéditas + provas reais</option><option value=\"ineditas\"" + (T.origem === "ineditas" ? " selected" : "") + ">Só inéditas</option><option value=\"reais\"" + (T.origem === "reais" ? " selected" : "") + ">Só provas reais IGEDUC</option><option value=\"outras\"" + (T.origem === "outras" ? " selected" : "") + ">Provas de perito (outras bancas)</option></select>" +
     "<select id=\"fDisc\" aria-label=\"Disciplina\"><option value=\"\">Todas as disciplinas</option>" + BANCO.map(function (q) { return q.disciplina; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).map(function (d) { return "<option" + (T.disc === d ? " selected" : "") + ">" + esc(d) + "</option>"; }).join("") + "</select>" +
     "<select id=\"fTema\" aria-label=\"Tema\"><option value=\"\">Todos os temas</option>" + temas.map(function (t) { return "<option" + (T.tema === t ? " selected" : "") + ">" + esc(t) + "</option>"; }).join("") + "</select>" +
     "<select id=\"fDif\" aria-label=\"Nível\"><option value=\"\">Todos os níveis</option>" + [1,2,3].map(function (n) { return "<option value=\"" + n + "\"" + (T.dif === String(n) ? " selected" : "") + ">Nível " + n + "</option>"; }).join("") + "</select>" +

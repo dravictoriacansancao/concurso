@@ -26,6 +26,22 @@ def main():
                           "comando": "CORRETA" if h["formato"] == "V/F" else h["comando"], "texto": None,
                           "enunciado": ("Julgue o item: " if h["formato"] == "V/F" else "") + h["enunciado"],
                           "alternativas": h["alternativas"], "gabarito": h["gabarito"], "verificar": False})
+    op = os.path.join(BASE, "data", "outras.jsonl")
+    n_outras = 0
+    if os.path.exists(op):
+        sigla = {"Cebraspe": "CEB", "FGV": "FGV", "UFG/CS": "UFG", "UPENET/IAUPE": "UPE", "CEV-URCA": "URC", "Instituto UniFil": "UNF", "FUNDATEC": "FUN"}
+        for l in open(op, encoding="utf-8"):
+            h = json.loads(l)
+            if h["anulada"]:
+                continue
+            ce = h["formato"] == "C/E"
+            reais.append({"id": f"O{sigla[h['banca']]}-{h['numero']:03d}", "real": True, "banca": h["banca"],
+                          "origem": f"{h['municipio']}/{h['uf']} {h['ano']} · {h['cargo']} · {'item' if ce else 'questão'} {h['numero']}" + (" · gabarito preliminar" if h.get("preliminar") else ""),
+                          "disciplina": h["disciplina"], "tema": h["tema"], "subtema": h["tema"], "dificuldade": 0,
+                          "comando": h["comando"], "texto": None, "contexto": h.get("contexto") if ce else None,
+                          "enunciado": ("Julgue o item: " if ce else "") + h["enunciado"],
+                          "alternativas": h["alternativas"], "gabarito": h["gabarito"], "verificar": False})
+            n_outras += 1
     data = json.dumps({"banco": banco, "reais": reais, "textos": textos, "matriz": matriz}, ensure_ascii=False).replace("</", "<\\/")
     tpl = open(os.path.join(BASE, "simulador", "template.html"), encoding="utf-8").read()
     page = tpl.replace("/*__DATA__*/", data)
@@ -34,7 +50,7 @@ def main():
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
             '</head>\n<body>\n' + page + '\n</body>\n</html>\n')
     open(os.path.join(BASE, "simulador", "index.html"), "w", encoding="utf-8").write(full)
-    print(f"simulador: {len(banco)} inéditas + {len(reais)} reais, {len(full)//1024} KB")
+    print(f"simulador: {len(banco)} inéditas + {len(reais) - n_outras} reais IGEDUC + {n_outras} de outras bancas, {len(full)//1024} KB")
 
 if __name__ == "__main__":
     main()

@@ -86,3 +86,19 @@ reclassificados → 35 itens). `relatorio/pericia-igeduc.md` lista os 35.
 (39% no formato A–E, acaso 20%); "exclusivamente" 0 × 88; SUS = 344 itens (bloco mais cobrado).
 **Matriz:** prioridades agora usam a frequência real (Lei 8.080 e APS/ESF no topo).
 **Simulador:** 1.963 itens reais (4, 5 alternativas e V/F); filtro por disciplina inclui Perícia (35 reais).
+
+## 2026-10-01 · Lote 4: provas de perito de outras bancas (zip "PERITO_OUTRAS_BANCAS")
+
+**Coleta:** 7 provas de médico perito (Cebraspe/MPS 2025, FGV/Macaé 2024, UFG/Goiânia 2022, UPENET/Olinda 2024,
+CEV-URCA/Várzea Alegre 2024, UniFil/Paranaguá 2022, FUNDATEC/Nova Santa Rita 2023), em `data/raw_outras/`.
+**Extração:** um leitor de gabarito e um marcador de questão por banca; 435/435 questões batem com o gabarito.
+Cebraspe e UniFil exigiram `pdftotext -layout` por coluna (o modo simples embaralha a ordem). Acentos soltos da URCA
+("opc¸a˜o") normalizados; cabeçalhos e marcas d'água removidos. Itens Cebraspe levam o comando/caso do bloco.
+FUNDATEC: só há gabarito preliminar.
+**Classificação:** manual, item a item, nos temas do edital → 279 no edital (196 de Perícia); 156 fora.
+**Simulador:** +272 itens (sem anuladas) com origem "Provas de perito (outras bancas)". Treino de chute continua
+só com questões originais da IGEDUC (filtro por `banca === "IGEDUC"`).
+**Inéditas:** +25 (PER-042 a PER-066) sobre NR 7, NR 15, NR 1, NR 32, NR 17, Schilling, pneumoconioses, TEPT,
+qualidade de segurado, carência, estabilidade, auxílio-acidente, BPC, isenção de IR e CEM. 6 de comando INCORRETA.
+Relatório: `relatorio/outras-bancas.md`.
+**Privacidade:** os 6 PDFs baixados do PCI Concursos (FUNDATEC, UniFil, UFG) trazem marca d'água com o IP de quem baixou; ficam fora do Git (`.gitignore`). Os dados extraídos estão limpos.
