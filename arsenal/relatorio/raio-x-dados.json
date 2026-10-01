@@ -1,0 +1,427 @@
+{
+ "por_disciplina": {
+  "Português": 28,
+  "Informática": 27,
+  "Clínica (outro cargo)": 30,
+  "SUS": 9,
+  "Constitucional": 10,
+  "Ética e serviço público": 6
+ },
+ "por_tema": {
+  "Português | Sintaxe": 10,
+  "Português | Interpretação e Análise Textual": 14,
+  "Português | Fonologia": 3,
+  "Informática | Utilização de planilhas eletrônicas": 6,
+  "Informática | Aplicativos de escritório": 4,
+  "Informática | Conceitos de segurança da informação e proteção de dados": 9,
+  "Informática | Conceitos de sistemas operacionais": 1,
+  "Informática | Conceitos sobre redes sociais e ferramentas colaborativas": 2,
+  "Informática | Ferramentas de backup e recuperação de dados": 1,
+  "Clínica (outro cargo) | fora do edital": 30,
+  "SUS | APS e ESF": 1,
+  "SUS | Gestão municipal do SUS": 3,
+  "SUS | Lei nº 8.080/1990": 3,
+  "Português | Morfologia": 1,
+  "Constitucional | Organização dos Poderes": 2,
+  "Constitucional | Administração Pública na CF": 3,
+  "Constitucional | Direitos e garantias fundamentais": 2,
+  "Constitucional | Aplicabilidade e interpretação das normas": 1,
+  "Constitucional | Princípios fundamentais": 1,
+  "Constitucional | Federalismo e organização do Estado": 1,
+  "Ética e serviço público | fora do edital": 6,
+  "Informática | E-mail e comunicação eletrônica no ambiente corporativo": 1,
+  "Informática | Conceitos básicos de hardware e software": 1,
+  "Informática | fora do edital": 1,
+  "Informática | Conceitos sobre protocolos de comunicação na internet": 1,
+  "SUS | fora do edital": 2
+ },
+ "letras": {
+  "contagem": {
+   "A": 29,
+   "B": 22,
+   "C": 28,
+   "D": 27
+  },
+  "n": 106,
+  "chi2": 1.09,
+  "p": 0.778
+ },
+ "letras_por_prova": {
+  "IGEDUC_114_SaoJoseSerido-RN-2025_MEDICO_cadernogabarito.pdf": {
+   "contagem": {
+    "A": 14,
+    "B": 6,
+    "C": 11,
+    "D": 8
+   },
+   "n": 39,
+   "chi2": 3.77,
+   "p": 0.287
+  },
+  "IGEDUC_142_CaboStoAgostinho-PE-2026_MEDICO_DO_PSF_cadernogabarito.pdf": {
+   "contagem": {
+    "A": 5,
+    "B": 8,
+    "C": 7,
+    "D": 8
+   },
+   "n": 28,
+   "chi2": 0.86,
+   "p": 0.836
+  },
+  "IGEDUC_95_Japaratinga-AL-2025_MEDICO_CLINICO_GERAL_cadernogabarito.pdf": {
+   "contagem": {
+    "A": 10,
+    "B": 8,
+    "C": 10,
+    "D": 11
+   },
+   "n": 39,
+   "chi2": 0.49,
+   "p": 0.922
+  }
+ },
+ "palavras_restritivas": {
+  "exclusivamente": {
+   "na_correta": 0,
+   "nas_erradas": 14,
+   "pct_correta": 0.0,
+   "pct_errada": 0.044,
+   "odds_ratio": 0.1
+  },
+  "sempre": {
+   "na_correta": 0,
+   "nas_erradas": 8,
+   "pct_correta": 0.0,
+   "pct_errada": 0.025,
+   "odds_ratio": 0.17
+  },
+  "restringe": {
+   "na_correta": 0,
+   "nas_erradas": 5,
+   "pct_correta": 0.0,
+   "pct_errada": 0.016,
+   "odds_ratio": 0.27
+  },
+  "suficiente": {
+   "na_correta": 0,
+   "nas_erradas": 5,
+   "pct_correta": 0.0,
+   "pct_errada": 0.016,
+   "odds_ratio": 0.27
+  },
+  "dispensa": {
+   "na_correta": 0,
+   "nas_erradas": 3,
+   "pct_correta": 0.0,
+   "pct_errada": 0.009,
+   "odds_ratio": 0.42
+  },
+  "somente": {
+   "na_correta": 0,
+   "nas_erradas": 3,
+   "pct_correta": 0.0,
+   "pct_errada": 0.009,
+   "odds_ratio": 0.42
+  },
+  "todos": {
+   "na_correta": 1,
+   "nas_erradas": 10,
+   "pct_correta": 0.009,
+   "pct_errada": 0.031,
+   "odds_ratio": 0.42
+  },
+  "qualquer": {
+   "na_correta": 1,
+   "nas_erradas": 8,
+   "pct_correta": 0.009,
+   "pct_errada": 0.025,
+   "odds_ratio": 0.52
+  },
+  "apenas": {
+   "na_correta": 8,
+   "nas_erradas": 41,
+   "pct_correta": 0.075,
+   "pct_errada": 0.129,
+   "odds_ratio": 0.58
+  },
+  "independentemente": {
+   "na_correta": 1,
+   "nas_erradas": 4,
+   "pct_correta": 0.009,
+   "pct_errada": 0.013,
+   "odds_ratio": 0.99
+  },
+  "elimina": {
+   "na_correta": 2,
+   "nas_erradas": 3,
+   "pct_correta": 0.019,
+   "pct_errada": 0.009,
+   "odds_ratio": 2.16
+  }
+ },
+ "comando": {
+  "CORRETA": 88,
+  "V/F ou sequência": 14,
+  "afirmativas I-II-III": 7,
+  "INCORRETA": 1
+ },
+ "tipo_por_disciplina": {
+  "Português": {
+   "direto": 27,
+   "situacional": 1
+  },
+  "Informática": {
+   "direto": 20,
+   "situacional": 7
+  },
+  "Clínica (outro cargo)": {
+   "direto": 26,
+   "situacional": 4
+  },
+  "SUS": {
+   "direto": 8,
+   "situacional": 1
+  },
+  "Constitucional": {
+   "direto": 10
+  },
+  "Ética e serviço público": {
+   "direto": 6
+  }
+ },
+ "normas_SUS": {
+  "Lei nº 8.080/1990": 2,
+  "art. 5": 1,
+  "art. 18": 1
+ },
+ "repeticoes": [],
+ "heuristicas": [
+  {
+   "heuristica": "alternativa mais longa",
+   "acertos": 46,
+   "n": 106,
+   "taxa": 0.434,
+   "ic95": [
+    0.344,
+    0.529
+   ],
+   "grupo": "todas"
+  },
+  {
+   "heuristica": "alternativa mais curta",
+   "acertos": 19,
+   "n": 106,
+   "taxa": 0.179,
+   "ic95": [
+    0.118,
+    0.263
+   ],
+   "grupo": "todas"
+  },
+  {
+   "heuristica": "menos palavras absolutas (desempate: mais longa)",
+   "acertos": 51,
+   "n": 106,
+   "taxa": 0.481,
+   "ic95": [
+    0.388,
+    0.575
+   ],
+   "grupo": "todas"
+  },
+  {
+   "heuristica": "mais integradora",
+   "acertos": 55,
+   "n": 106,
+   "taxa": 0.519,
+   "ic95": [
+    0.425,
+    0.612
+   ],
+   "grupo": "todas"
+  },
+  {
+   "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
+   "grupo": "todas",
+   "acertos": 35.1,
+   "n": 106,
+   "taxa": 0.331,
+   "ic95": [
+    0.248,
+    0.424
+   ]
+  },
+  {
+   "heuristica": "alternativa mais longa",
+   "acertos": 24,
+   "n": 62,
+   "taxa": 0.387,
+   "ic95": [
+    0.276,
+    0.512
+   ],
+   "grupo": "Gerais (Port/Const/Inf)"
+  },
+  {
+   "heuristica": "alternativa mais curta",
+   "acertos": 11,
+   "n": 62,
+   "taxa": 0.177,
+   "ic95": [
+    0.102,
+    0.29
+   ],
+   "grupo": "Gerais (Port/Const/Inf)"
+  },
+  {
+   "heuristica": "menos palavras absolutas (desempate: mais longa)",
+   "acertos": 22,
+   "n": 62,
+   "taxa": 0.355,
+   "ic95": [
+    0.247,
+    0.479
+   ],
+   "grupo": "Gerais (Port/Const/Inf)"
+  },
+  {
+   "heuristica": "mais integradora",
+   "acertos": 25,
+   "n": 62,
+   "taxa": 0.403,
+   "ic95": [
+    0.29,
+    0.527
+   ],
+   "grupo": "Gerais (Port/Const/Inf)"
+  },
+  {
+   "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
+   "grupo": "Gerais (Port/Const/Inf)",
+   "acertos": 16.6,
+   "n": 62,
+   "taxa": 0.267,
+   "ic95": [
+    0.179,
+    0.396
+   ]
+  },
+  {
+   "heuristica": "alternativa mais longa",
+   "acertos": 22,
+   "n": 38,
+   "taxa": 0.579,
+   "ic95": [
+    0.422,
+    0.721
+   ],
+   "grupo": "SUS + Clínica"
+  },
+  {
+   "heuristica": "alternativa mais curta",
+   "acertos": 4,
+   "n": 38,
+   "taxa": 0.105,
+   "ic95": [
+    0.042,
+    0.241
+   ],
+   "grupo": "SUS + Clínica"
+  },
+  {
+   "heuristica": "menos palavras absolutas (desempate: mais longa)",
+   "acertos": 26,
+   "n": 38,
+   "taxa": 0.684,
+   "ic95": [
+    0.525,
+    0.809
+   ],
+   "grupo": "SUS + Clínica"
+  },
+  {
+   "heuristica": "mais integradora",
+   "acertos": 25,
+   "n": 38,
+   "taxa": 0.658,
+   "ic95": [
+    0.499,
+    0.788
+   ],
+   "grupo": "SUS + Clínica"
+  },
+  {
+   "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
+   "grupo": "SUS + Clínica",
+   "acertos": 15.4,
+   "n": 38,
+   "taxa": 0.406,
+   "ic95": [
+    0.256,
+    0.553
+   ]
+  },
+  {
+   "heuristica": "alternativa mais longa",
+   "acertos": 10,
+   "n": 16,
+   "taxa": 0.625,
+   "ic95": [
+    0.386,
+    0.815
+   ],
+   "grupo": "'mais correta e completa'"
+  },
+  {
+   "heuristica": "alternativa mais curta",
+   "acertos": 1,
+   "n": 16,
+   "taxa": 0.062,
+   "ic95": [
+    0.011,
+    0.283
+   ],
+   "grupo": "'mais correta e completa'"
+  },
+  {
+   "heuristica": "menos palavras absolutas (desempate: mais longa)",
+   "acertos": 11,
+   "n": 16,
+   "taxa": 0.688,
+   "ic95": [
+    0.444,
+    0.858
+   ],
+   "grupo": "'mais correta e completa'"
+  },
+  {
+   "heuristica": "mais integradora",
+   "acertos": 9,
+   "n": 16,
+   "taxa": 0.562,
+   "ic95": [
+    0.332,
+    0.769
+   ],
+   "grupo": "'mais correta e completa'"
+  },
+  {
+   "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
+   "grupo": "'mais correta e completa'",
+   "acertos": 8.1,
+   "n": 16,
+   "taxa": 0.505,
+   "ic95": [
+    0.28,
+    0.72
+   ]
+  }
+ ],
+ "posicao_tamanho_correta": {
+  "0": 46,
+  "1": 25,
+  "2": 14,
+  "3": 21
+ }
+}

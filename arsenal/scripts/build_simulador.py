@@ -13,7 +13,19 @@ def main():
     matriz = []
     for r in csv.DictReader(open(os.path.join(BASE, "data", "matriz.csv"), encoding="utf-8")):
         matriz.append({"disciplina": r["disciplina"], "tema": r["tema"], "p_historico": float(r["p_historico"])})
-    data = json.dumps({"banco": banco, "textos": textos, "matriz": matriz}, ensure_ascii=False).replace("</", "<\\/")
+    reais = []
+    hp = os.path.join(BASE, "data", "historico.jsonl")
+    if os.path.exists(hp):
+        for l in open(hp, encoding="utf-8"):
+            h = json.loads(l)
+            if h["anulada"]:
+                continue
+            reais.append({"id": f"R{h['concurso']}-{h['numero']:02d}", "real": True,
+                          "origem": f"{h['municipio']}/{h['uf']} {h['ano']}, questão {h['numero']}",
+                          "disciplina": h["disciplina"], "tema": h["tema"], "subtema": h["tema"], "dificuldade": 0,
+                          "comando": h["comando"], "texto": None, "enunciado": h["enunciado"],
+                          "alternativas": h["alternativas"], "gabarito": h["gabarito"], "verificar": False})
+    data = json.dumps({"banco": banco, "reais": reais, "textos": textos, "matriz": matriz}, ensure_ascii=False).replace("</", "<\\/")
     tpl = open(os.path.join(BASE, "simulador", "template.html"), encoding="utf-8").read()
     page = tpl.replace("/*__DATA__*/", data)
     open(os.path.join(BASE, "simulador", "web.html"), "w", encoding="utf-8").write(page)
@@ -21,7 +33,7 @@ def main():
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
             '</head>\n<body>\n' + page + '\n</body>\n</html>\n')
     open(os.path.join(BASE, "simulador", "index.html"), "w", encoding="utf-8").write(full)
-    print(f"simulador: {len(banco)} questões, {len(full)//1024} KB")
+    print(f"simulador: {len(banco)} inéditas + {len(reais)} reais, {len(full)//1024} KB")
 
 if __name__ == "__main__":
     main()

@@ -9,7 +9,7 @@ Central de decisões e estudos da Victoria para o concurso de **Médica Perita**
 |---|---|---|
 | [`00-edital/`](00-edital/) | Edital (PDF) + resumo estruturado | ✅ resumo pronto |
 | [`01-requisito-titulacao/`](01-requisito-titulacao/) | Solução mais barata para o requisito de pós-graduação | ✅ Facuvale/Iguaçu aprovada no e-MEC: matricular (R$ 500, Pix/cartão) |
-| [`arsenal/`](arsenal/) | Banco de questões IGEDUC + simulador + plano de estudo | ✅ lote 1 (123 questões) |
+| [`arsenal/`](arsenal/) | Banco de questões IGEDUC + simulador + plano de estudo | ✅ 123 inéditas + 106 reais IGEDUC + raio-X da banca |
 | [`02-estudos/`](02-estudos/) | Plano de estudos para a prova | ✅ checklist + cronograma |
 
 ## Fluxo

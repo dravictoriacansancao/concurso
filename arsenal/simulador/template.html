@@ -132,7 +132,8 @@ textarea { width: 100%; min-height: 110px; background: var(--paper); border: 1px
 (function () {
 "use strict";
 var DATA = JSON.parse(document.getElementById("data").textContent);
-var BANCO = DATA.banco, TEXTOS = DATA.textos, MATRIZ = DATA.matriz;
+var BANCO = DATA.banco.concat(DATA.reais || []), TEXTOS = DATA.textos, MATRIZ = DATA.matriz;
+var INEDITAS = DATA.banco;
 var BY_ID = {}; BANCO.forEach(function (q) { BY_ID[q.id] = q; });
 var DISC = [["Português",10,1.1,.60],["Constitucional",5,1.1,.45],["Informática",5,1.1,.50],["Perícia",15,2.6,.80],["SUS",15,2.6,.55]];
 var DISC_INFO = {}; DISC.forEach(function (d) { DISC_INFO[d[0]] = {n:d[1], peso:d[2], est:d[3]}; });
@@ -166,7 +167,7 @@ function fmtClock(ms) { ms = Math.max(0, ms); var h = Math.floor(ms / 36e5), m =
 
 function countdown() {
   var d = Math.ceil((PROVA - Date.now()) / DAY);
-  $("#countdown").textContent = d > 0 ? d + " dias para 01/11 · " + BANCO.length + " questões" : BANCO.length + " questões";
+  var nr = BANCO.length - INEDITAS.length; $("#countdown").textContent = (d > 0 ? d + " dias para 01/11 · " : "") + INEDITAS.length + " inéditas + " + nr + " reais";
 }
 function badge() {
   var n = Object.keys(S.srs).filter(function (id) { return BY_ID[id] && S.srs[id].due <= Date.now(); }).length;
@@ -177,12 +178,12 @@ function badge() {
 function qHTML(q, opts) {
   opts = opts || {};
   var h = "<div class=\"qhead\"><span class=\"tag disc\">" + esc(q.disciplina) + "</span><span>" + esc(q.tema) + "</span>" +
-    "<span class=\"tag\">" + q.id + "</span><span class=\"tag\">nível " + q.dificuldade + "</span>" +
+    "<span class=\"tag\">" + q.id + "</span>" + (q.real ? "<span class=\"tag warn\">prova real · " + esc(q.origem) + "</span>" : "<span class=\"tag\">nível " + q.dificuldade + "</span>") +
     (q.verificar ? "<span class=\"tag warn\" title=\"Conferir a redação vigente da norma\">conferir lei</span>" : "") + "</div>";
   if (q.texto && TEXTOS[q.texto] && !opts.semEnunciado) h += "<div class=\"texto\">" + esc(TEXTOS[q.texto]) + "</div>";
   if (!opts.semEnunciado) h += "<div class=\"enun\">" + esc(q.enunciado) + "</div>";
   h += "<div class=\"alts\">";
-  "ABCDE".split("").forEach(function (L) {
+  Object.keys(q.alternativas).sort().forEach(function (L) {
     h += "<button class=\"alt\" data-l=\"" + L + "\"><span class=\"bub\">" + L + "</span><span class=\"atx\">" + esc(q.alternativas[L]) + "</span></button>";
   });
   return h + "</div>";
@@ -193,33 +194,36 @@ function reveal(box, q, chosen, opts) {
     var L = b.dataset.l; b.disabled = true;
     if (L === q.gabarito) b.classList.add("right"); else if (L === chosen) b.classList.add("wrong");
     if (opts.marcar) b.querySelector(".atx").innerHTML = hl(q.alternativas[L]);
-    if (L !== q.gabarito) b.querySelector(".atx").insertAdjacentHTML("beforeend", "<span class=\"why\">" + esc(q.por_que_cada_errada[L]) + "</span>");
+    if (L !== q.gabarito && q.por_que_cada_errada) b.querySelector(".atx").insertAdjacentHTML("beforeend", "<span class=\"why\">" + esc(q.por_que_cada_errada[L]) + "</span>");
   });
   var ok = chosen === q.gabarito;
   box.insertAdjacentHTML("beforeend",
     "<div class=\"expl\"><div class=\"verdict " + (ok ? "ok" : "bad") + "\">" + (chosen ? (ok ? "Acertou." : "Errou. Gabarito: " + q.gabarito) : "Gabarito: " + q.gabarito) + "</div>" +
+    (q.real ? "<div class=\"muted\">Questão real da IGEDUC (" + esc(q.origem) + "). Gabarito definitivo oficial; a banca não publica comentário.</div></div>" :
     "<div><b>Por que " + q.gabarito + ".</b> " + esc(q.comentario_correta) + "</div>" +
     "<div><b>Pegadinha treinada.</b> " + esc(q.pegadinha) + "</div>" +
-    "<div class=\"muted\">Fundamento: " + esc(q.fundamento) + (q.verificar ? " · conferir a redação vigente no Planalto" : "") + "</div></div>");
+    "<div class=\"muted\">Fundamento: " + esc(q.fundamento) + (q.verificar ? " · conferir a redação vigente no Planalto" : "") + "</div></div>"));
   return ok;
 }
 
 /* ---------- TREINO ---------- */
-var T = { disc: "", tema: "", dif: "", erradas: false, fila: [], i: 0, t0: 0 };
+var T = { disc: "", tema: "", dif: "", origem: "", erradas: false, fila: [], i: 0, t0: 0 };
 function treinoFila() {
   T.fila = shuffle(BANCO.filter(function (q) {
-    return (!T.disc || q.disciplina === T.disc) && (!T.tema || q.tema === T.tema) && (!T.dif || String(q.dificuldade) === T.dif) && (!T.erradas || lastWrong(q.id));
+    return (!T.origem || (T.origem === "reais") === !!q.real) && (!T.disc || q.disciplina === T.disc) && (!T.tema || q.tema === T.tema) && (!T.dif || String(q.dificuldade) === T.dif) && (!T.erradas || lastWrong(q.id));
   })); T.i = 0;
 }
 function viewTreino() {
   var temas = BANCO.filter(function (q) { return !T.disc || q.disciplina === T.disc; }).map(function (q) { return q.tema; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
   var app = $("#app");
   app.innerHTML =
-    "<div class=\"bar\"><select id=\"fDisc\" aria-label=\"Disciplina\"><option value=\"\">Todas as disciplinas</option>" + DISC.map(function (d) { return "<option" + (T.disc === d[0] ? " selected" : "") + ">" + d[0] + "</option>"; }).join("") + "</select>" +
+    "<div class=\"bar\"><select id=\"fOri\" aria-label=\"Origem\"><option value=\"\">Inéditas + provas reais</option><option value=\"ineditas\"" + (T.origem === "ineditas" ? " selected" : "") + ">Só inéditas</option><option value=\"reais\"" + (T.origem === "reais" ? " selected" : "") + ">Só provas reais IGEDUC</option></select>" +
+    "<select id=\"fDisc\" aria-label=\"Disciplina\"><option value=\"\">Todas as disciplinas</option>" + BANCO.map(function (q) { return q.disciplina; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).map(function (d) { return "<option" + (T.disc === d ? " selected" : "") + ">" + esc(d) + "</option>"; }).join("") + "</select>" +
     "<select id=\"fTema\" aria-label=\"Tema\"><option value=\"\">Todos os temas</option>" + temas.map(function (t) { return "<option" + (T.tema === t ? " selected" : "") + ">" + esc(t) + "</option>"; }).join("") + "</select>" +
     "<select id=\"fDif\" aria-label=\"Nível\"><option value=\"\">Todos os níveis</option>" + [1,2,3].map(function (n) { return "<option value=\"" + n + "\"" + (T.dif === String(n) ? " selected" : "") + ">Nível " + n + "</option>"; }).join("") + "</select>" +
     "<label class=\"chk\"><input type=\"checkbox\" id=\"fErr\"" + (T.erradas ? " checked" : "") + "> Só as que errei</label></div>" +
     "<div id=\"tBox\"></div>";
+  $("#fOri").onchange = function () { T.origem = this.value; T.disc = ""; T.tema = ""; treinoFila(); viewTreino(); };
   $("#fDisc").onchange = function () { T.disc = this.value; T.tema = ""; treinoFila(); viewTreino(); };
   $("#fTema").onchange = function () { T.tema = this.value; treinoFila(); viewTreino(); };
   $("#fDif").onchange = function () { T.dif = this.value; treinoFila(); viewTreino(); };
@@ -247,7 +251,7 @@ var SIM = null, timer = null;
 function montarSimulado() {
   var qs = [];
   DISC.forEach(function (d) {
-    var pool = BANCO.filter(function (q) { return q.disciplina === d[0]; });
+    var pool = INEDITAS.filter(function (q) { return q.disciplina === d[0]; });
     if (d[0] === "Português") { // mantém questões do mesmo texto juntas
       var grupos = {}; pool.forEach(function (q) { var k = q.texto || q.id; (grupos[k] = grupos[k] || []).push(q); });
       var sel = []; shuffle(Object.keys(grupos)).forEach(function (k) { if (sel.length + grupos[k].length <= d[1]) sel = sel.concat(grupos[k]); });
@@ -377,18 +381,20 @@ function viewPainel() {
 }
 
 /* ---------- TREINO DE CHUTE ---------- */
-var CH = null;
+var CH = null, CH_REAIS = true;
 function viewChute() {
   var app = $("#app");
   var acc = S.chute.length ? S.chute.filter(function (x) { return x; }).length / S.chute.length : NaN;
-  var q = CH || (CH = shuffle(BANCO.filter(function (q) { return q.comando === "CORRETA"; }))[0]);
-  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Acaso = 20%. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p></div>" +
+  var poolCh = BANCO.filter(function (q) { return q.comando === "CORRETA" && (q.real ? CH_REAIS : !CH_REAIS); });
+  var q = CH || (CH = shuffle(poolCh)[0]);
+  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Nas provas reais (4 alternativas) o acaso é 25%: lá, a correta foi a mais longa em 43% das questões e nenhuma correta trouxe 'exclusivamente' ou 'sempre'. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p><label class=\"chk\"><input type=\"checkbox\" id=\"chR\"" + (CH_REAIS ? " checked" : "") + "> Usar questões de provas reais</label></div>" +
     "<div class=\"sheet\" id=\"qs\">" + qHTML(q, { semEnunciado: true }) + "</div><div class=\"nav\"><span></span><button class=\"btn primary\" id=\"next\" disabled>Próxima</button></div>";
   $("#qs").querySelectorAll(".alt").forEach(function (b) { b.onclick = function () {
     var ok = reveal($("#qs"), q, b.dataset.l, { marcar: true }); S.chute.push(ok); save();
     $("#qs").insertAdjacentHTML("afterbegin", "<div class=\"enun\"><b>Enunciado:</b> " + esc(q.enunciado) + "</div>");
     $("#next").disabled = false;
   }; });
+  $("#chR").onchange = function () { CH_REAIS = this.checked; CH = null; viewChute(); };
   $("#next").onclick = function () { CH = null; viewChute(); };
 }
 

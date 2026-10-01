@@ -15,6 +15,8 @@ def carregar_historico():
     if os.path.exists(path):
         for linha in open(path, encoding="utf-8"):
             q = json.loads(linha)
+            if q["disciplina"] not in TEMAS or q["tema"] not in TEMAS[q["disciplina"]]:
+                continue  # fora do edital do perito (clínica, ética etc.)
             cont[(q["disciplina"], q["tema"])] = cont.get((q["disciplina"], q["tema"]), 0) + 1
     return cont
 

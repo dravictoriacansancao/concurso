@@ -35,3 +35,22 @@ Chromium a 400 px: sem erros de script, sem rolagem horizontal; simulado com tod
 
 **Etapa 7 – entrega.** README, `scripts/gerar.py` (Claude Opus 5.5 via API, JSON estruturado, fallback de
 recusa), `scripts/atualizar_matriz.py` (testado com progresso de exemplo).
+
+## 2026-10-01 · Provas reais (etapas 1–3)
+
+**Coleta:** 5 PDFs enviados pela Victoria (caderno + gabarito), salvos em `data/raw/`.
+**Extração:** texto por coluna (`pdftotext` com recorte da página); 170 questões, todas com 4 alternativas.
+**Gabaritos:** transcrição de cada PDF conferida contra o bloco oficial do mesmo PDF: 5/5 idênticos.
+**Duplicatas:** os 3 cadernos de Cabo de Santo Agostinho (PSF, Trabalho, Psiquiatra) têm o mesmo gabarito
+letra por letra → caderno único; contado uma vez. Resultado: 110 questões únicas, 4 anuladas, 106 válidas.
+**Classificação:** manual por número de questão (`scripts/classificar_historico.py`); 36 fora do edital do perito
+(clínica e ética). `scripts/validar_parse.py historico.jsonl` → OK.
+**Raio-X:** `relatorio/raio-x.md`. Achados: sem vício de letra (p = 0,78); correta é a mais longa em 43%
+(acaso 25%); "menos absolutos" acerta 48% (68% em SUS/clínica); "exclusivamente" e "sempre" nunca na correta;
+INCORRETA só 1%; formato de 4 alternativas (Porto Calvo terá 5).
+**Matriz:** `data/matriz.csv` agora usa a frequência real de temas (suavização de Laplace).
+**Simulador:** 106 questões reais adicionadas (Treino com filtro de origem; Treino de chute usa as reais;
+Simulado continua só com inéditas, no formato de 5 alternativas). Teste no Chromium: sem erros.
+
+**Observação para os próximos lotes de inéditas:** a banca real TEM o padrão "correta mais longa/completa".
+O lote 1 foi neutralizado de propósito (16%). Decidir se os próximos lotes devem reproduzir o padrão real.
