@@ -20,7 +20,7 @@ def main():
             h = json.loads(l)
             if h["anulada"]:
                 continue
-            reais.append({"id": f"R{h['concurso']}-{h['numero']:02d}", "real": True,
+            reais.append({"id": f"R{h['concurso']}-{h['numero']:02d}", "real": True, "banca": "IGEDUC",
                           "origem": f"{h['municipio']}/{h['uf']} {h['ano']} · {h['cargo'].title()} · {'item' if h['formato'] == 'V/F' else 'questão'} {h['numero']}" + (" · gabarito preliminar" if h.get('preliminar') else ""),
                           "disciplina": h["disciplina"], "tema": h["tema"], "subtema": h["tema"], "dificuldade": 0,
                           "comando": "CORRETA" if h["formato"] == "V/F" else h["comando"], "texto": None,

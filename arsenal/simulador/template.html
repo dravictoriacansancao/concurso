@@ -382,20 +382,21 @@ function viewPainel() {
 }
 
 /* ---------- TREINO DE CHUTE ---------- */
-var CH = null, CH_REAIS = true;
+var CH = null, CH_5 = false;
 function viewChute() {
   var app = $("#app");
   var acc = S.chute.length ? S.chute.filter(function (x) { return x; }).length / S.chute.length : NaN;
-  var poolCh = BANCO.filter(function (q) { return q.comando === "CORRETA" && (q.real ? CH_REAIS : !CH_REAIS); });
+  // só questões originais da IGEDUC, de múltipla escolha (V/F não tem alternativas para comparar)
+  var poolCh = BANCO.filter(function (q) { return q.real && q.banca === "IGEDUC" && q.comando === "CORRETA" && !q.alternativas.V && (!CH_5 || q.alternativas.E); });
   var q = CH || (CH = shuffle(poolCh)[0]);
-  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Nas provas reais (4 alternativas) o acaso é 25%: em 886 questões de 21 concursos, a mais completa e equilibrada acertou 42% (39% no formato A–E, acaso 20%), e nenhuma correta trouxe 'exclusivamente', 'dispensa' ou 'suficiente'. Nos itens de V/F, quem tem palavra absoluta é falso o dobro das vezes. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p><label class=\"chk\"><input type=\"checkbox\" id=\"chR\"" + (CH_REAIS ? " checked" : "") + "> Usar questões de provas reais</label></div>" +
+  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Aqui só entram questões originais da IGEDUC. Em 886 questões de 21 concursos, a mais completa e equilibrada acertou 42% (39% no formato A–E, acaso 20%), e nenhuma correta trouxe 'exclusivamente', 'dispensa' ou 'suficiente'. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p><label class=\"chk\"><input type=\"checkbox\" id=\"chR\"" + (CH_5 ? " checked" : "") + "> Só formato da minha prova (5 alternativas, 2026)</label></div>" +
     "<div class=\"sheet\" id=\"qs\">" + qHTML(q, { semEnunciado: true }) + "</div><div class=\"nav\"><span></span><button class=\"btn primary\" id=\"next\" disabled>Próxima</button></div>";
   $("#qs").querySelectorAll(".alt").forEach(function (b) { b.onclick = function () {
     var ok = reveal($("#qs"), q, b.dataset.l, { marcar: true }); S.chute.push(ok); save();
     $("#qs").insertAdjacentHTML("afterbegin", "<div class=\"enun\"><b>Enunciado:</b> " + esc(q.enunciado) + "</div>");
     $("#next").disabled = false;
   }; });
-  $("#chR").onchange = function () { CH_REAIS = this.checked; CH = null; viewChute(); };
+  $("#chR").onchange = function () { CH_5 = this.checked; CH = null; viewChute(); };
   $("#next").onclick = function () { CH = null; viewChute(); };
 }
 
