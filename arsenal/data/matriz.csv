@@ -1,0 +1,68 @@
+disciplina,tema,n_historico,N_disciplina,p_historico,peso_edital,pontos_esperados,taxa_acerto_atual,fonte_taxa,dificuldade_para_mim,prioridade
+SUS,APS e ESF,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+SUS,CF/88 arts. 196 a 200,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+SUS,Controle social,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+SUS,Financiamento,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+SUS,Gestão municipal do SUS,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+SUS,Indicadores e monitoramento,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+SUS,Lei nº 8.080/1990,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+SUS,Lei nº 8.142/1990,0,0,0.125,2.6,4.875,0.55,estimativa inicial,0.45,2.194
+Português,Fonologia,0,0,0.1667,1.1,1.833,0.6,estimativa inicial,0.4,0.733
+Português,Interpretação e Análise Textual,0,0,0.1667,1.1,1.833,0.6,estimativa inicial,0.4,0.733
+Português,Morfologia,0,0,0.1667,1.1,1.833,0.6,estimativa inicial,0.4,0.733
+Português,Redação Oficial,0,0,0.1667,1.1,1.833,0.6,estimativa inicial,0.4,0.733
+Português,Semântica,0,0,0.1667,1.1,1.833,0.6,estimativa inicial,0.4,0.733
+Português,Sintaxe,0,0,0.1667,1.1,1.833,0.6,estimativa inicial,0.4,0.733
+Perícia,Avaliação da capacidade laborativa,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação de dano corporal e nexo causal,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação de invalidez e incapacidade permanente,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças cardiovasculares,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças dermatológicas,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças endócrinas e metabólicas,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças infecciosas,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças neurológicas,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças osteomusculares,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças psiquiátricas,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Avaliação pericial em doenças respiratórias,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Bioética aplicada à perícia médica,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Classificação Internacional de Doenças (CID-10/CID-11),0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Diagnóstico diferencial em clínica médica,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Doenças crônicas incapacitantes,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Doenças ocupacionais e relacionadas ao trabalho,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Epidemiologia clínica aplicada à perícia,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Exame clínico direcionado à perícia médica,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Incapacidade temporária / permanente,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Interpretação de exames complementares,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Medicina baseada em evidências,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Nexo técnico epidemiológico,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Perícia médica previdenciária,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Prognóstico funcional das principais doenças,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Perícia,Semiologia médica aplicada à perícia,0,0,0.04,2.6,1.56,0.8,estimativa inicial,0.2,0.312
+Informática,Aplicativos de escritório,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Conceitos básicos de hardware e software,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,"Conceitos de internet, intranet e redes",0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Conceitos de segurança da informação e proteção de dados,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Conceitos de sistemas operacionais,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Conceitos sobre armazenamento e gerenciamento de arquivos,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Conceitos sobre navegadores e ferramentas de busca,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Conceitos sobre protocolos de comunicação na internet,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Conceitos sobre redes sociais e ferramentas colaborativas,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,E-mail e comunicação eletrônica no ambiente corporativo,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Ferramentas de backup e recuperação de dados,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Noções de computação em nuvem,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Informática,Utilização de planilhas eletrônicas,0,0,0.0769,1.1,0.423,0.5,estimativa inicial,0.5,0.212
+Constitucional,Administração Pública na CF,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Aplicabilidade e interpretação das normas,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Controle de constitucionalidade,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Direitos e garantias fundamentais,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Direitos políticos,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Federalismo e organização do Estado,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Organização dos Poderes,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Poder constituinte,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Princípios fundamentais,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Processo legislativo,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Remédios constitucionais,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Responsabilidade do Estado,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Segurança pública na Constituição,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Sistema tributário nacional,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
+Constitucional,Supremacia da Constituição,0,0,0.0667,1.1,0.367,0.45,estimativa inicial,0.55,0.202
