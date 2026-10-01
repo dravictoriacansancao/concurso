@@ -11,6 +11,8 @@ simulador offline, matriz de prioridade e plano de estudo.
   **Progresso** (copiar/colar para passar de um aparelho a outro).
 - No Treino, o filtro de origem separa: inéditas · provas reais IGEDUC · **provas de perito (outras bancas)**.
   O Treino de chute usa só questões originais da IGEDUC.
+- **3 simulados completos para imprimir** (50 questões A–E, distribuição do edital, folha de respostas e gabarito
+  comentado no final): `simulados/simulado-1.pdf`, `simulado-2.pdf`, `simulado-3.pdf`. Gerados por `scripts/simulados_pdf.py`.
 - Para estudar no papel: `simulador/banco.pdf`. Para o Anki: importe `simulador/flashcards.csv` (separador `;`).
 
 ## 2. Gerar mais questões de um tema

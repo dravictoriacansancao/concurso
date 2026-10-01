@@ -102,3 +102,12 @@ só com questões originais da IGEDUC (filtro por `banca === "IGEDUC"`).
 qualidade de segurado, carência, estabilidade, auxílio-acidente, BPC, isenção de IR e CEM. 6 de comando INCORRETA.
 Relatório: `relatorio/outras-bancas.md`.
 **Privacidade:** os 6 PDFs baixados do PCI Concursos (FUNDATEC, UniFil, UFG) trazem marca d'água com o IP de quem baixou; ficam fora do Git (`.gitignore`). Os dados extraídos estão limpos.
+
+## 2026-10-01 · 3 simulados em PDF
+
+`scripts/simulados_pdf.py` → `simulados/simulado-{1,2,3}.pdf` (+ .html). Cada um: 50 questões A–E na ordem e
+distribuição do edital (10 Port · 5 Const · 5 Inf · 15 Perícia · 15 SUS), 4 h, folha de respostas, gabarito,
+tabela de nota (pesos 1,1/2,6; corte 70) e gabarito comentado (inéditas com comentário e pegadinha; reais com a
+origem). Nenhuma questão se repete entre os três. Mistura ≈ 22 inéditas + 18 reais IGEDUC + 10 de perito de
+outras bancas por simulado. Português: só itens reais autocontidos (24 revisados à mão); itens que dependem de
+texto não incluído ou com defeito de extração ficaram de fora.
