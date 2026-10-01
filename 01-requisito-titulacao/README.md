@@ -34,10 +34,14 @@ O termo é vago: pode ser só a própria especialização/CRM ou pode significar
 
 </details>
 
-## Títulos: usar a pós em PSIQUIATRIA (custo zero)
+## Títulos: usar a pós em PSIQUIATRIA (custo zero) ✅ certificado conferido
+**Albert Einstein (Faculdade Israelita de Ciências da Saúde) · "Psiquiatria na Clínica Médica e Cirúrgica" · lato sensu · 360 h · 01/08/2023–30/09/2024 · certificado de 03/02/2025, registro nº 10870/25 · histórico com todas as notas 10,0.** Arquivo fora do repo (contém CPF).
+
 - A pós em Psiquiatria **não é o requisito do cargo**, então a regra do item 4.3.3.3 não a exclui. Vale até **+1 pt**.
 - Ponto de atenção: o edital exige "área estrita e claramente relacionada com o cargo" (4.3.2). Argumento: o Anexo II cobra **"Avaliação pericial em doenças psiquiátricas"**, e o cargo avalia capacidade laborativa, em que os transtornos mentais são causa frequente de afastamento.
-- Enviar **certificado** (ou **declaração de conclusão + histórico**) + uma **justificativa curta** da relação com o cargo (item 4.3.4).
+- Enviar **o PDF de 2 páginas (certificado + histórico)** + a justificativa abaixo (item 4.3.4).
+
+> **Justificativa:** A especialização lato sensu em Psiquiatria na Clínica Médica e Cirúrgica (360 h, Faculdade Israelita de Ciências da Saúde Albert Einstein) guarda relação estrita com o cargo de Médico Perito Clínico Geral. O Anexo II do edital inclui expressamente, em Conhecimentos Profissionais, a "Avaliação pericial em doenças psiquiátricas", além de "Avaliação da capacidade laborativa", "Incapacidade temporária/permanente" e "Doenças crônicas incapacitantes", temas em que os transtornos mentais estão entre as causas mais frequentes de incapacidade avaliadas em perícia. O histórico comprova as disciplinas de Psicopatologia e exame psíquico, Transtornos depressivos e bipolar, Esquizofrenia e transtornos psicóticos, Transtornos relacionados ao uso de substâncias, Transtornos da personalidade e Prática Baseada em Evidências, diretamente aplicáveis ao exame pericial e ao estabelecimento de diagnóstico, prognóstico funcional e nexo causal.
 - Envio: 05–08/12/2026 · Recurso: 16–19/12/2026, se não pontuar.
 
 ## Títulos: impacto da falta de pós (cenário sem a psiquiatria)
