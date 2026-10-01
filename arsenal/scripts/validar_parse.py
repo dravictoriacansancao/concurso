@@ -7,7 +7,7 @@ hist = [json.loads(l) for l in open(path, encoding="utf-8")]
 erros = []
 for q in hist:
     n = len(q["alternativas"]); letras = "".join(sorted(q["alternativas"]))
-    if letras not in ("ABCD", "ABCDE"): erros.append(f"{q['fonte'][:40]} Q{q['numero']}: alternativas {letras}")
+    if letras not in ("ABCD", "ABCDE", "FV"): erros.append(f"{q['fonte'][:40]} Q{q['numero']}: alternativas {letras}")
     if not q["anulada"] and q["gabarito"] not in q["alternativas"]: erros.append(f"{q['fonte'][:40]} Q{q['numero']}: gabarito {q['gabarito']}")
     if len(q["enunciado"]) < 15: erros.append(f"{q['fonte'][:40]} Q{q['numero']}: enunciado curto")
 print(f"{len(hist)} questões · nº de alternativas: {dict(Counter(len(q['alternativas']) for q in hist))} · anuladas: {sum(q['anulada'] for q in hist)}")

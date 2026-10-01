@@ -21,9 +21,10 @@ def main():
             if h["anulada"]:
                 continue
             reais.append({"id": f"R{h['concurso']}-{h['numero']:02d}", "real": True,
-                          "origem": f"{h['municipio']}/{h['uf']} {h['ano']}, questão {h['numero']}",
+                          "origem": f"{h['municipio']}/{h['uf']} {h['ano']} · {h['cargo'].title()} · {'item' if h['formato'] == 'V/F' else 'questão'} {h['numero']}" + (" · gabarito preliminar" if h.get('preliminar') else ""),
                           "disciplina": h["disciplina"], "tema": h["tema"], "subtema": h["tema"], "dificuldade": 0,
-                          "comando": h["comando"], "texto": None, "enunciado": h["enunciado"],
+                          "comando": "CORRETA" if h["formato"] == "V/F" else h["comando"], "texto": None,
+                          "enunciado": ("Julgue o item: " if h["formato"] == "V/F" else "") + h["enunciado"],
                           "alternativas": h["alternativas"], "gabarito": h["gabarito"], "verificar": False})
     data = json.dumps({"banco": banco, "reais": reais, "textos": textos, "matriz": matriz}, ensure_ascii=False).replace("</", "<\\/")
     tpl = open(os.path.join(BASE, "simulador", "template.html"), encoding="utf-8").read()

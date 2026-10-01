@@ -1,50 +1,115 @@
 {
  "por_disciplina": {
-  "Português": 29,
-  "Informática": 27,
-  "Específica (outro cargo)": 106,
-  "SUS": 9,
-  "Constitucional": 12,
-  "Ética e serviço público": 9
+  "SUS": 344,
+  "Ética e serviço público": 56,
+  "Específica (outro cargo)": 1261,
+  "Português": 166,
+  "Informática": 66,
+  "Constitucional": 38,
+  "Perícia": 35,
+  "Raciocínio lógico/Matemática": 14
  },
  "por_tema": {
-  "Português | Sintaxe": 11,
-  "Português | Fonologia": 3,
-  "Português | Interpretação e Análise Textual": 15,
-  "Informática | Aplicativos de escritório": 4,
-  "Informática | Utilização de planilhas eletrônicas": 8,
-  "Informática | Conceitos de segurança da informação e proteção de dados": 9,
+  "SUS | Lei nº 8.080/1990": 103,
+  "SUS | Controle social": 26,
+  "SUS | Financiamento": 15,
+  "Ética e serviço público | fora do edital": 56,
+  "Específica (outro cargo) | fora do edital": 1261,
+  "SUS | APS e ESF": 97,
+  "SUS | Indicadores e monitoramento": 43,
+  "SUS | fora do edital": 29,
+  "Português | Sintaxe": 29,
+  "Português | Fonologia": 20,
+  "Português | Interpretação e Análise Textual": 112,
+  "Informática | Aplicativos de escritório": 10,
+  "Informática | Utilização de planilhas eletrônicas": 15,
+  "Informática | Conceitos de segurança da informação e proteção de dados": 20,
   "Informática | Ferramentas de backup e recuperação de dados": 1,
-  "Informática | Conceitos de sistemas operacionais": 1,
-  "Específica (outro cargo) | fora do edital": 106,
-  "SUS | Lei nº 8.080/1990": 3,
-  "SUS | fora do edital": 3,
-  "SUS | Gestão municipal do SUS": 2,
-  "SUS | APS e ESF": 1,
-  "Constitucional | Organização dos Poderes": 2,
-  "Constitucional | Administração Pública na CF": 5,
-  "Constitucional | Princípios fundamentais": 1,
-  "Constitucional | Federalismo e organização do Estado": 1,
-  "Constitucional | Direitos e garantias fundamentais": 2,
+  "Informática | Conceitos de sistemas operacionais": 3,
+  "SUS | Gestão municipal do SUS": 31,
+  "Constitucional | Direitos e garantias fundamentais": 4,
+  "Constitucional | Organização dos Poderes": 10,
+  "Constitucional | Princípios fundamentais": 4,
+  "Perícia | Doenças ocupacionais e relacionadas ao trabalho": 18,
+  "Português | Morfologia": 3,
+  "Raciocínio lógico/Matemática | fora do edital": 14,
+  "Perícia | Bioética aplicada à perícia médica": 12,
+  "Informática | E-mail e comunicação eletrônica no ambiente corporativo": 3,
+  "Constitucional | Administração Pública na CF": 13,
+  "Constitucional | Federalismo e organização do Estado": 6,
+  "Perícia | Avaliação de dano corporal e nexo causal": 1,
+  "Português | Semântica": 2,
   "Constitucional | Aplicabilidade e interpretação das normas": 1,
-  "Ética e serviço público | fora do edital": 9,
-  "Informática | E-mail e comunicação eletrônica no ambiente corporativo": 1,
   "Informática | Conceitos sobre redes sociais e ferramentas colaborativas": 1,
-  "Informática | Conceitos básicos de hardware e software": 1,
-  "Informática | fora do edital": 1
+  "Informática | Conceitos básicos de hardware e software": 4,
+  "Informática | fora do edital": 8,
+  "Informática | Conceitos sobre navegadores e ferramentas de busca": 1,
+  "Perícia | Avaliação da capacidade laborativa": 1,
+  "Perícia | Perícia médica previdenciária": 1,
+  "Perícia | Classificação Internacional de Doenças (CID-10/CID-11)": 2
+ },
+ "letras_4alt": {
+  "contagem": {
+   "A": 147,
+   "B": 144,
+   "C": 130,
+   "D": 147
+  },
+  "n": 568,
+  "chi2": 1.39,
+  "p": 0.707
+ },
+ "letras_5alt": {
+  "contagem": {
+   "A": 69,
+   "B": 56,
+   "C": 63,
+   "D": 66,
+   "E": 64
+  },
+  "n": 318,
+  "chi2": 1.47,
+  "p": 0.833
  },
  "letras": {
   "contagem": {
-   "A": 53,
-   "B": 43,
-   "C": 41,
-   "D": 51
+   "A": 147,
+   "B": 144,
+   "C": 130,
+   "D": 147
   },
-  "n": 188,
-  "chi2": 2.21,
-  "p": 0.529
+  "n": 568,
+  "chi2": 1.39,
+  "p": 0.707
+ },
+ "vf": {
+  "n": 1077,
+  "V": 570,
+  "F": 507
  },
  "letras_por_prova": {
+  "IGEDUC_110_Flores-PE-2025_CADERNO_MEDICO_CARDIOLOGISTA.pdf": {
+   "contagem": {
+    "A": 7,
+    "B": 12,
+    "C": 11,
+    "D": 9
+   },
+   "n": 39,
+   "chi2": 1.51,
+   "p": 0.679
+  },
+  "IGEDUC_110_Flores-PE-2025_CADERNO_MEDICO_PSIQUIATRA.pdf": {
+   "contagem": {
+    "A": 5,
+    "B": 8,
+    "C": 5,
+    "D": 2
+   },
+   "n": 20,
+   "chi2": 3.6,
+   "p": 0.308
+  },
   "IGEDUC_114_SaoJoseSerido-RN-2025_CADERNO_FARMACEUTICO_BIOQUIMICO.pdf": {
    "contagem": {
     "A": 10,
@@ -60,12 +125,171 @@
    "contagem": {
     "A": 6,
     "B": 2,
-    "C": 4,
+    "C": 3,
     "D": 3
    },
+   "n": 14,
+   "chi2": 2.57,
+   "p": 0.463
+  },
+  "IGEDUC_121_Craibas-AL-2025_CADERNO_MEDICO_ANGIOLOGISTA_VASCULAR.pdf": {
+   "contagem": {
+    "A": 10,
+    "B": 6,
+    "C": 6,
+    "D": 16
+   },
+   "n": 38,
+   "chi2": 7.05,
+   "p": 0.07
+  },
+  "IGEDUC_121_Craibas-AL-2025_CADERNO_MEDICO_CARDIOLOGISTA.pdf": {
+   "contagem": {
+    "A": 3,
+    "B": 5,
+    "C": 3,
+    "D": 4
+   },
    "n": 15,
-   "chi2": 2.33,
-   "p": 0.506
+   "chi2": 0.73,
+   "p": 0.865
+  },
+  "IGEDUC_121_Craibas-AL-2025_CADERNO_MEDICO_NEUROPEDIATRA.pdf": {
+   "contagem": {
+    "A": 3,
+    "B": 3,
+    "C": 3,
+    "D": 8
+   },
+   "n": 17,
+   "chi2": 4.41,
+   "p": 0.22
+  },
+  "IGEDUC_121_Craibas-AL-2025_CADERNO_MEDICO_OTORRINOLARINGOLOGISTA.pdf": {
+   "contagem": {
+    "A": 2,
+    "B": 5,
+    "C": 3,
+    "D": 6
+   },
+   "n": 16,
+   "chi2": 2.5,
+   "p": 0.475
+  },
+  "IGEDUC_121_Craibas-AL-2025_CADERNO_MEDICO_PEDIATRA.pdf": {
+   "contagem": {
+    "A": 4,
+    "B": 3,
+    "C": 4,
+    "D": 4
+   },
+   "n": 15,
+   "chi2": 0.2,
+   "p": 0.978
+  },
+  "IGEDUC_121_Craibas-AL-2025_CADERNO_MEDICO_UROLOGISTA.pdf": {
+   "contagem": {
+    "A": 7,
+    "B": 3,
+    "C": 3,
+    "D": 2
+   },
+   "n": 15,
+   "chi2": 3.93,
+   "p": 0.269
+  },
+  "IGEDUC_122_Terezinha-PE-2026_CADERNO_MEDICO_PLANTONISTA.pdf": {
+   "contagem": {
+    "A": 15,
+    "B": 6,
+    "C": 8,
+    "D": 13,
+    "E": 7
+   },
+   "n": 49,
+   "chi2": 6.41,
+   "p": 0.171
+  },
+  "IGEDUC_129_Pao_de_Acucar-AL-2026_CADERNO_MEDICO_PSF.pdf": {
+   "contagem": {
+    "A": 11,
+    "B": 9,
+    "C": 12,
+    "D": 13,
+    "E": 14
+   },
+   "n": 59,
+   "chi2": 1.25,
+   "p": 0.869
+  },
+  "IGEDUC_133_Serraria-PB-2025_CADERNO_MEDICO_PSF.pdf": {
+   "contagem": {
+    "A": 11,
+    "B": 9,
+    "C": 6,
+    "D": 14
+   },
+   "n": 40,
+   "chi2": 3.4,
+   "p": 0.334
+  },
+  "IGEDUC_136_Jati-CE-2025_CADERNO_MEDICO_PLANTONISTA.pdf": {
+   "contagem": {
+    "A": 12,
+    "B": 13,
+    "C": 14,
+    "D": 10
+   },
+   "n": 49,
+   "chi2": 0.71,
+   "p": 0.87
+  },
+  "IGEDUC_136_Jati-CE-2025_CADERNO_MEDICO_PSF.pdf": {
+   "contagem": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 1
+   },
+   "n": 1,
+   "chi2": 3.0,
+   "p": 0.392
+  },
+  "IGEDUC_137_Policlinica_Paulo_Afonso-BA-2026_CADERNO_MEDICO_CARDIOLOGISTA_CLINICO.pdf": {
+   "contagem": {
+    "A": 10,
+    "B": 10,
+    "C": 12,
+    "D": 8,
+    "E": 9
+   },
+   "n": 49,
+   "chi2": 0.9,
+   "p": 0.925
+  },
+  "IGEDUC_137_Policlinica_Paulo_Afonso-BA-2026_CADERNO_MEDICO_ENDOCRINOLOGISTA_E_METABOLOGIA.pdf": {
+   "contagem": {
+    "A": 3,
+    "B": 4,
+    "C": 4,
+    "D": 5,
+    "E": 2
+   },
+   "n": 18,
+   "chi2": 1.44,
+   "p": 0.836
+  },
+  "IGEDUC_137_Policlinica_Paulo_Afonso-BA-2026_CADERNO_MEDICO_NEUROLOGISTA.pdf": {
+   "contagem": {
+    "A": 3,
+    "B": 4,
+    "C": 2,
+    "D": 2,
+    "E": 1
+   },
+   "n": 12,
+   "chi2": 2.17,
+   "p": 0.705
   },
   "IGEDUC_142_CaboStoAgostinho-PE-2026_CADERNO_ENFERMEIRO_DO_PSF.pdf": {
    "contagem": {
@@ -88,6 +312,99 @@
    "n": 2,
    "chi2": 6.0,
    "p": 0.112
+  },
+  "IGEDUC_143_Altos-PI-2026_CADERNO_MEDICO.pdf": {
+   "contagem": {
+    "A": 11,
+    "B": 6,
+    "C": 8,
+    "D": 10,
+    "E": 15
+   },
+   "n": 50,
+   "chi2": 4.6,
+   "p": 0.331
+  },
+  "IGEDUC_143_Altos-PI-2026_CADERNO_MEDICO_DO_PSF.pdf": {
+   "contagem": {
+    "A": 0,
+    "B": 1,
+    "C": 1,
+    "D": 2,
+    "E": 0
+   },
+   "n": 4,
+   "chi2": 3.5,
+   "p": 0.478
+  },
+  "IGEDUC_143_Altos-PI-2026_CADERNO_MEDICO_PLANTONISTA.pdf": {
+   "contagem": {
+    "A": 5,
+    "B": 2,
+    "C": 5,
+    "D": 3,
+    "E": 2
+   },
+   "n": 17,
+   "chi2": 2.71,
+   "p": 0.608
+  },
+  "IGEDUC_155_Terra_Nova-PE-2026_CADERNO_MEDICO_ESF.pdf": {
+   "contagem": {
+    "A": 5,
+    "B": 6,
+    "C": 5,
+    "D": 6,
+    "E": 8
+   },
+   "n": 30,
+   "chi2": 1.0,
+   "p": 0.91
+  },
+  "IGEDUC_164_Salgueiro-PE-2026_CADERNO_MEDICO_PLANTONISTA.pdf": {
+   "contagem": {
+    "A": 6,
+    "B": 8,
+    "C": 6,
+    "D": 4,
+    "E": 6
+   },
+   "n": 30,
+   "chi2": 1.33,
+   "p": 0.856
+  },
+  "IGEDUC_64_Calumbi-PE-2024_CADERNO_MEDICO_CLINICO_GERAL.pdf": {
+   "contagem": {
+    "A": 10,
+    "B": 14,
+    "C": 11,
+    "D": 5
+   },
+   "n": 40,
+   "chi2": 4.2,
+   "p": 0.241
+  },
+  "IGEDUC_74_Paraiso_do_Norte-PR-2024_CADERNO_MEDICO_CLINICO_GERAL.pdf": {
+   "contagem": {
+    "A": 12,
+    "B": 12,
+    "C": 12,
+    "D": 9
+   },
+   "n": 45,
+   "chi2": 0.6,
+   "p": 0.896
+  },
+  "IGEDUC_74_Paraiso_do_Norte-PR-2024_CADERNO_MEDICO_PEDIATRA.pdf": {
+   "contagem": {
+    "A": 8,
+    "B": 8,
+    "C": 9,
+    "D": 6
+   },
+   "n": 31,
+   "chi2": 0.61,
+   "p": 0.893
   },
   "IGEDUC_95_Japaratinga-AL-2025_CADERNO_ENFERMEIRO.pdf": {
    "contagem": {
@@ -148,121 +465,192 @@
  "palavras_restritivas": {
   "exclusivamente": {
    "na_correta": 0,
-   "nas_erradas": 24,
+   "nas_erradas": 88,
    "pct_correta": 0.0,
-   "pct_errada": 0.043,
-   "odds_ratio": 0.06
-  },
-  "sempre": {
-   "na_correta": 0,
-   "nas_erradas": 9,
-   "pct_correta": 0.0,
-   "pct_errada": 0.016,
-   "odds_ratio": 0.16
-  },
-  "suficiente": {
-   "na_correta": 0,
-   "nas_erradas": 8,
-   "pct_correta": 0.0,
-   "pct_errada": 0.014,
-   "odds_ratio": 0.17
-  },
-  "restringe": {
-   "na_correta": 0,
-   "nas_erradas": 6,
-   "pct_correta": 0.0,
-   "pct_errada": 0.011,
-   "odds_ratio": 0.23
-  },
-  "todos": {
-   "na_correta": 1,
-   "nas_erradas": 14,
-   "pct_correta": 0.005,
-   "pct_errada": 0.025,
-   "odds_ratio": 0.3
-  },
-  "qualquer": {
-   "na_correta": 1,
-   "nas_erradas": 10,
-   "pct_correta": 0.005,
-   "pct_errada": 0.018,
-   "odds_ratio": 0.42
+   "pct_errada": 0.033,
+   "odds_ratio": 0.02
   },
   "dispensa": {
    "na_correta": 0,
-   "nas_erradas": 3,
+   "nas_erradas": 32,
    "pct_correta": 0.0,
-   "pct_errada": 0.005,
-   "odds_ratio": 0.43
+   "pct_errada": 0.012,
+   "odds_ratio": 0.05
   },
-  "somente": {
+  "suficiente": {
+   "na_correta": 0,
+   "nas_erradas": 16,
+   "pct_correta": 0.0,
+   "pct_errada": 0.006,
+   "odds_ratio": 0.09
+  },
+  "restringe": {
+   "na_correta": 0,
+   "nas_erradas": 15,
+   "pct_correta": 0.0,
+   "pct_errada": 0.006,
+   "odds_ratio": 0.1
+  },
+  "único": {
+   "na_correta": 0,
+   "nas_erradas": 11,
+   "pct_correta": 0.0,
+   "pct_errada": 0.004,
+   "odds_ratio": 0.13
+  },
+  "independentemente": {
+   "na_correta": 2,
+   "nas_erradas": 45,
+   "pct_correta": 0.002,
+   "pct_errada": 0.017,
+   "odds_ratio": 0.16
+  },
+  "obrigatoriamente": {
+   "na_correta": 0,
+   "nas_erradas": 7,
+   "pct_correta": 0.0,
+   "pct_errada": 0.003,
+   "odds_ratio": 0.2
+  },
+  "unicamente": {
+   "na_correta": 0,
+   "nas_erradas": 6,
+   "pct_correta": 0.0,
+   "pct_errada": 0.002,
+   "odds_ratio": 0.23
+  },
+  "qualquer": {
+   "na_correta": 2,
+   "nas_erradas": 28,
+   "pct_correta": 0.002,
+   "pct_errada": 0.011,
+   "odds_ratio": 0.26
+  },
+  "todos": {
+   "na_correta": 5,
+   "nas_erradas": 51,
+   "pct_correta": 0.006,
+   "pct_errada": 0.019,
+   "odds_ratio": 0.32
+  },
+  "sempre": {
+   "na_correta": 2,
+   "nas_erradas": 19,
+   "pct_correta": 0.002,
+   "pct_errada": 0.007,
+   "odds_ratio": 0.38
+  },
+  "nenhum": {
    "na_correta": 0,
    "nas_erradas": 3,
    "pct_correta": 0.0,
-   "pct_errada": 0.005,
+   "pct_errada": 0.001,
    "odds_ratio": 0.43
-  },
-  "independentemente": {
-   "na_correta": 1,
-   "nas_erradas": 7,
-   "pct_correta": 0.005,
-   "pct_errada": 0.012,
-   "odds_ratio": 0.59
-  },
-  "apenas": {
-   "na_correta": 16,
-   "nas_erradas": 70,
-   "pct_correta": 0.085,
-   "pct_errada": 0.124,
-   "odds_ratio": 0.67
   },
   "garante": {
    "na_correta": 1,
-   "nas_erradas": 3,
-   "pct_correta": 0.005,
+   "nas_erradas": 8,
+   "pct_correta": 0.001,
+   "pct_errada": 0.003,
+   "odds_ratio": 0.53
+  },
+  "única": {
+   "na_correta": 2,
+   "nas_erradas": 12,
+   "pct_correta": 0.002,
    "pct_errada": 0.005,
-   "odds_ratio": 1.28
+   "odds_ratio": 0.6
+  },
+  "apenas": {
+   "na_correta": 129,
+   "nas_erradas": 572,
+   "pct_correta": 0.146,
+   "pct_errada": 0.215,
+   "odds_ratio": 0.62
+  },
+  "somente": {
+   "na_correta": 2,
+   "nas_erradas": 10,
+   "pct_correta": 0.002,
+   "pct_errada": 0.004,
+   "odds_ratio": 0.71
+  },
+  "vedado": {
+   "na_correta": 1,
+   "nas_erradas": 3,
+   "pct_correta": 0.001,
+   "pct_errada": 0.001,
+   "odds_ratio": 1.29
   },
   "elimina": {
-   "na_correta": 2,
-   "nas_erradas": 4,
-   "pct_correta": 0.011,
-   "pct_errada": 0.007,
-   "odds_ratio": 1.67
+   "na_correta": 5,
+   "nas_erradas": 12,
+   "pct_correta": 0.006,
+   "pct_errada": 0.005,
+   "odds_ratio": 1.32
+  },
+  "impede": {
+   "na_correta": 3,
+   "nas_erradas": 2,
+   "pct_correta": 0.003,
+   "pct_errada": 0.001,
+   "odds_ratio": 4.21
   }
  },
  "comando": {
-  "CORRETA": 146,
-  "V/F ou sequência": 35,
-  "afirmativas I-II-III": 10,
-  "INCORRETA": 1
+  "CORRETA": 1747,
+  "afirmativas I-II-III": 38,
+  "V/F ou sequência": 185,
+  "INCORRETA": 10
  },
  "tipo_por_disciplina": {
-  "Português": {
-   "direto": 28,
-   "situacional": 1
-  },
-  "Informática": {
-   "direto": 21,
-   "situacional": 6
-  },
-  "Específica (outro cargo)": {
-   "direto": 82,
-   "situacional": 24
-  },
   "SUS": {
-   "direto": 8,
-   "situacional": 1
-  },
-  "Constitucional": {
-   "direto": 12
+   "situacional": 36,
+   "direto": 308
   },
   "Ética e serviço público": {
-   "direto": 9
+   "situacional": 5,
+   "direto": 51
+  },
+  "Específica (outro cargo)": {
+   "direto": 1081,
+   "situacional": 180
+  },
+  "Português": {
+   "direto": 148,
+   "situacional": 18
+  },
+  "Informática": {
+   "direto": 46,
+   "situacional": 20
+  },
+  "Constitucional": {
+   "situacional": 6,
+   "direto": 32
+  },
+  "Perícia": {
+   "situacional": 15,
+   "direto": 20
+  },
+  "Raciocínio lógico/Matemática": {
+   "direto": 12,
+   "situacional": 2
   }
  },
  "normas_SUS": {
-  "Lei nº 8.080/1990": 2,
+  "Lei nº 8.080/1990": 31,
+  "Lei nº 8.142/1990": 12,
+  "Lei nº 8.689/1993": 4,
+  "art. 7": 1,
+  "Lei nº 10.216/2001": 1,
+  "Lei nº 12.527/2011": 1,
+  "art. 2": 1,
+  "art. 1": 3,
+  "art. 10": 1,
+  "art. 198": 1,
+  "art. 19": 1,
+  "art. 20": 1,
+  "Lei nº 12.401/2011": 1,
   "art. 18": 1,
   "art. 5": 1
  },
@@ -270,229 +658,297 @@
  "heuristicas": [
   {
    "heuristica": "alternativa mais longa",
-   "acertos": 73,
-   "n": 188,
-   "taxa": 0.388,
+   "acertos": 329,
+   "n": 886,
+   "taxa": 0.371,
    "ic95": [
-    0.322,
-    0.46
+    0.34,
+    0.404
    ],
    "grupo": "todas"
   },
   {
    "heuristica": "alternativa mais curta",
-   "acertos": 36,
-   "n": 188,
-   "taxa": 0.191,
+   "acertos": 163,
+   "n": 886,
+   "taxa": 0.184,
    "ic95": [
-    0.142,
-    0.254
+    0.16,
+    0.211
    ],
    "grupo": "todas"
   },
   {
    "heuristica": "menos palavras absolutas (desempate: mais longa)",
-   "acertos": 78,
-   "n": 188,
-   "taxa": 0.415,
+   "acertos": 346,
+   "n": 886,
+   "taxa": 0.391,
    "ic95": [
-    0.347,
-    0.486
+    0.359,
+    0.423
    ],
    "grupo": "todas"
   },
   {
    "heuristica": "mais integradora",
-   "acertos": 82,
-   "n": 188,
-   "taxa": 0.436,
+   "acertos": 375,
+   "n": 886,
+   "taxa": 0.423,
    "ic95": [
-    0.367,
-    0.508
+    0.391,
+    0.456
    ],
    "grupo": "todas"
   },
   {
    "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
    "grupo": "todas",
-   "acertos": 59.5,
-   "n": 188,
-   "taxa": 0.316,
+   "acertos": 249.1,
+   "n": 886,
+   "taxa": 0.281,
    "ic95": [
-    0.257,
-    0.389
+    0.252,
+    0.312
    ]
   },
   {
    "heuristica": "alternativa mais longa",
-   "acertos": 23,
-   "n": 65,
-   "taxa": 0.354,
+   "acertos": 48,
+   "n": 171,
+   "taxa": 0.281,
    "ic95": [
-    0.249,
-    0.475
+    0.219,
+    0.352
    ],
    "grupo": "Gerais (Port/Const/Inf)"
   },
   {
    "heuristica": "alternativa mais curta",
-   "acertos": 15,
-   "n": 65,
-   "taxa": 0.231,
+   "acertos": 46,
+   "n": 171,
+   "taxa": 0.269,
    "ic95": [
-    0.145,
-    0.346
+    0.208,
+    0.34
    ],
    "grupo": "Gerais (Port/Const/Inf)"
   },
   {
    "heuristica": "menos palavras absolutas (desempate: mais longa)",
-   "acertos": 25,
-   "n": 65,
-   "taxa": 0.385,
+   "acertos": 53,
+   "n": 171,
+   "taxa": 0.31,
    "ic95": [
-    0.276,
-    0.506
+    0.245,
+    0.383
    ],
    "grupo": "Gerais (Port/Const/Inf)"
   },
   {
    "heuristica": "mais integradora",
-   "acertos": 26,
-   "n": 65,
-   "taxa": 0.4,
+   "acertos": 60,
+   "n": 171,
+   "taxa": 0.351,
    "ic95": [
-    0.29,
-    0.521
+    0.283,
+    0.425
    ],
    "grupo": "Gerais (Port/Const/Inf)"
   },
   {
    "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
    "grupo": "Gerais (Port/Const/Inf)",
-   "acertos": 17.5,
-   "n": 65,
-   "taxa": 0.269,
+   "acertos": 42.6,
+   "n": 171,
+   "taxa": 0.249,
    "ic95": [
-    0.17,
-    0.38
+    0.192,
+    0.321
    ]
   },
   {
    "heuristica": "alternativa mais longa",
-   "acertos": 49,
-   "n": 114,
-   "taxa": 0.43,
+   "acertos": 265,
+   "n": 665,
+   "taxa": 0.398,
    "ic95": [
-    0.343,
-    0.522
+    0.362,
+    0.436
    ],
    "grupo": "SUS + específicas de saúde"
   },
   {
    "heuristica": "alternativa mais curta",
-   "acertos": 15,
-   "n": 114,
-   "taxa": 0.132,
+   "acertos": 106,
+   "n": 665,
+   "taxa": 0.159,
    "ic95": [
-    0.081,
-    0.206
+    0.134,
+    0.189
    ],
    "grupo": "SUS + específicas de saúde"
   },
   {
    "heuristica": "menos palavras absolutas (desempate: mais longa)",
-   "acertos": 49,
-   "n": 114,
-   "taxa": 0.43,
+   "acertos": 275,
+   "n": 665,
+   "taxa": 0.414,
    "ic95": [
-    0.343,
-    0.522
+    0.377,
+    0.451
    ],
    "grupo": "SUS + específicas de saúde"
   },
   {
    "heuristica": "mais integradora",
-   "acertos": 48,
-   "n": 114,
-   "taxa": 0.421,
+   "acertos": 292,
+   "n": 665,
+   "taxa": 0.439,
    "ic95": [
-    0.334,
-    0.513
+    0.402,
+    0.477
    ],
    "grupo": "SUS + específicas de saúde"
   },
   {
    "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
    "grupo": "SUS + específicas de saúde",
-   "acertos": 37.2,
-   "n": 114,
-   "taxa": 0.327,
+   "acertos": 189.4,
+   "n": 665,
+   "taxa": 0.285,
    "ic95": [
-    0.246,
-    0.415
+    0.251,
+    0.32
    ]
   },
   {
    "heuristica": "alternativa mais longa",
-   "acertos": 10,
-   "n": 19,
-   "taxa": 0.526,
+   "acertos": 17,
+   "n": 45,
+   "taxa": 0.378,
    "ic95": [
-    0.317,
-    0.727
+    0.251,
+    0.524
    ],
    "grupo": "'mais correta e completa'"
   },
   {
    "heuristica": "alternativa mais curta",
-   "acertos": 2,
-   "n": 19,
-   "taxa": 0.105,
+   "acertos": 8,
+   "n": 45,
+   "taxa": 0.178,
    "ic95": [
-    0.029,
-    0.314
+    0.093,
+    0.313
    ],
    "grupo": "'mais correta e completa'"
   },
   {
    "heuristica": "menos palavras absolutas (desempate: mais longa)",
-   "acertos": 12,
-   "n": 19,
-   "taxa": 0.632,
+   "acertos": 20,
+   "n": 45,
+   "taxa": 0.444,
    "ic95": [
-    0.41,
-    0.809
+    0.309,
+    0.588
    ],
    "grupo": "'mais correta e completa'"
   },
   {
    "heuristica": "mais integradora",
-   "acertos": 10,
-   "n": 19,
-   "taxa": 0.526,
+   "acertos": 18,
+   "n": 45,
+   "taxa": 0.4,
    "ic95": [
-    0.317,
-    0.727
+    0.27,
+    0.545
    ],
    "grupo": "'mais correta e completa'"
   },
   {
    "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
    "grupo": "'mais correta e completa'",
-   "acertos": 8.6,
-   "n": 19,
-   "taxa": 0.452,
+   "acertos": 14.1,
+   "n": 45,
+   "taxa": 0.314,
    "ic95": [
-    0.273,
-    0.683
+    0.195,
+    0.457
+   ]
+  },
+  {
+   "heuristica": "alternativa mais longa",
+   "acertos": 103,
+   "n": 318,
+   "taxa": 0.324,
+   "ic95": [
+    0.275,
+    0.377
+   ],
+   "grupo": "só 5 alternativas (2026, formato da sua prova)"
+  },
+  {
+   "heuristica": "alternativa mais curta",
+   "acertos": 43,
+   "n": 318,
+   "taxa": 0.135,
+   "ic95": [
+    0.102,
+    0.177
+   ],
+   "grupo": "só 5 alternativas (2026, formato da sua prova)"
+  },
+  {
+   "heuristica": "menos palavras absolutas (desempate: mais longa)",
+   "acertos": 105,
+   "n": 318,
+   "taxa": 0.33,
+   "ic95": [
+    0.281,
+    0.384
+   ],
+   "grupo": "só 5 alternativas (2026, formato da sua prova)"
+  },
+  {
+   "heuristica": "mais integradora",
+   "acertos": 124,
+   "n": 318,
+   "taxa": 0.39,
+   "ic95": [
+    0.338,
+    0.445
+   ],
+   "grupo": "só 5 alternativas (2026, formato da sua prova)"
+  },
+  {
+   "heuristica": "eliminar alternativas com absolutos e chutar entre as restantes",
+   "grupo": "só 5 alternativas (2026, formato da sua prova)",
+   "acertos": 73.2,
+   "n": 318,
+   "taxa": 0.23,
+   "ic95": [
+    0.187,
+    0.279
    ]
   }
  ],
- "posicao_tamanho_correta": {
-  "0": 71,
-  "1": 47,
-  "2": 35,
-  "3": 35
+ "posicao_tamanho_correta_5alt": {
+  "0": 101,
+  "1": 60,
+  "2": 63,
+  "3": 46,
+  "4": 48
+ },
+ "vf_absolutos": {
+  "pct_F_com_absoluto": 0.304,
+  "pct_V_com_absoluto": 0.147
+ },
+ "pericia": {
+  "Doenças ocupacionais e relacionadas ao trabalho": 18,
+  "Bioética aplicada à perícia médica": 12,
+  "Avaliação de dano corporal e nexo causal": 1,
+  "Avaliação da capacidade laborativa": 1,
+  "Perícia médica previdenciária": 1,
+  "Classificação Internacional de Doenças (CID-10/CID-11)": 2
  }
 }

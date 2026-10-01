@@ -183,7 +183,7 @@ function qHTML(q, opts) {
   if (q.texto && TEXTOS[q.texto] && !opts.semEnunciado) h += "<div class=\"texto\">" + esc(TEXTOS[q.texto]) + "</div>";
   if (!opts.semEnunciado) h += "<div class=\"enun\">" + esc(q.enunciado) + "</div>";
   h += "<div class=\"alts\">";
-  Object.keys(q.alternativas).sort().forEach(function (L) {
+  (q.alternativas.V ? ["V", "F"] : Object.keys(q.alternativas).sort()).forEach(function (L) {
     h += "<button class=\"alt\" data-l=\"" + L + "\"><span class=\"bub\">" + L + "</span><span class=\"atx\">" + esc(q.alternativas[L]) + "</span></button>";
   });
   return h + "</div>";
@@ -388,7 +388,7 @@ function viewChute() {
   var acc = S.chute.length ? S.chute.filter(function (x) { return x; }).length / S.chute.length : NaN;
   var poolCh = BANCO.filter(function (q) { return q.comando === "CORRETA" && (q.real ? CH_REAIS : !CH_REAIS); });
   var q = CH || (CH = shuffle(poolCh)[0]);
-  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Nas provas reais (4 alternativas) o acaso é 25%: em 188 questões, a mais completa e sem absolutos acertou 42–44%, e nenhuma correta trouxe 'exclusivamente', 'sempre' ou 'suficiente'. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p><label class=\"chk\"><input type=\"checkbox\" id=\"chR\"" + (CH_REAIS ? " checked" : "") + "> Usar questões de provas reais</label></div>" +
+  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Nas provas reais (4 alternativas) o acaso é 25%: em 886 questões de 21 concursos, a mais completa e equilibrada acertou 42% (39% no formato A–E, acaso 20%), e nenhuma correta trouxe 'exclusivamente', 'dispensa' ou 'suficiente'. Nos itens de V/F, quem tem palavra absoluta é falso o dobro das vezes. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p><label class=\"chk\"><input type=\"checkbox\" id=\"chR\"" + (CH_REAIS ? " checked" : "") + "> Usar questões de provas reais</label></div>" +
     "<div class=\"sheet\" id=\"qs\">" + qHTML(q, { semEnunciado: true }) + "</div><div class=\"nav\"><span></span><button class=\"btn primary\" id=\"next\" disabled>Próxima</button></div>";
   $("#qs").querySelectorAll(".alt").forEach(function (b) { b.onclick = function () {
     var ok = reveal($("#qs"), q, b.dataset.l, { marcar: true }); S.chute.push(ok); save();

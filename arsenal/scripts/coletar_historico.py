@@ -46,7 +46,7 @@ ROTULO = {
 def run(*a): return subprocess.run(list(a), capture_output=True, text=True).stdout
 def npag(p): return int(re.search(r"Pages:\s+(\d+)", run("pdfinfo", p)).group(1))
 
-PAR = re.compile(r"\b(\d{2})[.:]\s*([A-E]|V|F|Anulad[ao])\b", re.I)
+PAR = re.compile(r"\b(\d{2})[.:]\s*([A-E]|V|F|X|Anulad[ao])\b", re.I)
 
 def gabarito_oficial(pdf, regex):
     linhas = run("pdftotext", "-layout", pdf, "-").split("\n")
@@ -58,7 +58,7 @@ def gabarito_oficial(pdf, regex):
                 if len(pares) < 2:
                     if l2.strip() and g: break
                     continue
-                g.update({int(n): ("ANULADA" if v.upper().startswith("ANULAD") else v.upper()) for n, v in pares})
+                g.update({int(n): ("ANULADA" if v.upper().startswith("ANULAD") or v.upper() == "X" else v.upper()) for n, v in pares})
             if g:
                 return g
     raise SystemExit(f"{os.path.basename(pdf)}: rótulo {regex} não encontrado")
@@ -96,17 +96,19 @@ def questoes(cad):
         qs[n] = (limpa(alts[0]), {alts[j]: limpa(alts[j + 1]) for j in range(1, len(alts) - 1, 2)})
     return qs
 
-def itens_vf(cad):
-    """Formato 'Julgue os itens': 'NN. afirmação' sem alternativas; números crescentes."""
-    qs, esperado = {}, 1
-    partes = re.split(r"\n\s*(\d{2})\.\s+", "\n" + cad)
-    atual = None
+def itens_vf(cad, total):
+    """Formato 'Julgue os itens': 'N. afirmação' sem alternativas; números crescentes até o total do gabarito."""
+    qs, esperado, atual = {}, 1, None
+    m = re.search(r"CONHECIMENTOS (GERAIS|ESPEC[ÍI]FICOS)|Julgue os itens", cad)   # pula as instruções numeradas da capa
+    if m:
+        cad = cad[m.start():]
+    partes = re.split(r"\n\s*(\d{1,2})\.(?=\s)", "\n" + cad)
     for k in range(1, len(partes) - 1, 2):
         n = int(partes[k])
-        if n == esperado:
+        if n == esperado and n <= total:
             atual = n; qs[n] = partes[k + 1]; esperado += 1
         elif atual:
-            qs[atual] += f"\n{partes[k]}. " + partes[k + 1]
+            qs[atual] += f"\n{partes[k]}." + partes[k + 1]
     return {n: (limpa(t), {"V": "Verdadeiro (certo)", "F": "Falso (errado)"}) for n, t in qs.items()}
 
 def main():
@@ -119,7 +121,7 @@ def main():
         gab = gabarito_oficial(gab_pdf, ROTULO[(cid, cargo)])
         txt = texto_caderno(cad)
         vf = set(gab.values()) <= {"V", "F", "ANULADA"}
-        qs = itens_vf(txt) if vf else questoes(txt)
+        qs = itens_vf(txt, max(gab)) if vf else questoes(txt)
         pos = max(txt.find("Conhecimentos Específicos"), txt.find("CONHECIMENTOS ESPECÍFICOS"))
         m_esp = re.search(r"Questão\s+(\d{2})|\n\s*(\d{2})\.\s", txt[pos:]) if pos > 0 else None
         n_esp = int(m_esp.group(1) or m_esp.group(2)) if m_esp else None

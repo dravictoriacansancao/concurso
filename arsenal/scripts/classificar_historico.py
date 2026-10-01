@@ -63,11 +63,51 @@ AJUSTE = {
     (142, "ENFERMEIRO DO PSF", 28): ("Informática", FORA),
     (114, "FARMACEUTICO BIOQUIMICO", 38): ("SUS", "Gestão municipal do SUS"),
     (114, "FARMACEUTICO BIOQUIMICO", 40): ("SUS", "Lei nº 8.080/1990"),
+    # revisão manual dos itens marcados como Perícia (falsos positivos)
+    (110, "MEDICO PSIQUIATRA", 23): ("Específica (outro cargo)", FORA),
+    (110, "MEDICO PSIQUIATRA", 31): ("Específica (outro cargo)", FORA),
+    (122, "MEDICO PLANTONISTA", 9): ("Português", "Interpretação e Análise Textual"),
+    (129, "MEDICO PSF", 45): ("SUS", "Indicadores e monitoramento"),
+    (21, "MEDICO CARDIOLOGISTA", 41): ("Específica (outro cargo)", FORA),
+    (77, "MEDICO CLINICO", 62): ("Específica (outro cargo)", FORA),
+    (89, "MEDICO UROLOGISTA", 56): ("SUS", "Lei nº 8.080/1990"),
 }
+
+PERICIA_NUCLEO = [   # termos inequívocos de perícia
+    (r"nexo t[ée]cnico epidemiol|\bNTEP\b", "Nexo técnico epidemiológico"),
+    (r"\bnexo (causal|de causalidade|t[ée]cnico)|concausa|dano corporal", "Avaliação de dano corporal e nexo causal"),
+    (r"\blaudo|\bperit[oa]s?\b|\bper[íi]cia|pericial|assistente t[ée]cnico|C[óo]digo de [ÉE]tica M[ée]dica|psiquiatria forense", "Bioética aplicada à perícia médica"),
+    (r"\bINSS\b|aux[íi]lio-(doen[çc]a|acidente)|aposentadoria por (invalidez|incapacidade)|reabilita[çc][ãa]o profissional|benef[íi]cio (previdenci|por incapacidade)", "Perícia médica previdenciária"),
+    (r"incapacidade (laboral|laborativa|para o trabalho|tempor[áa]ria|permanente|total|parcial)|capacidade laborativa|apto para o trabalho|inapto|retorno ao trabalho|afastamento do trabalho", "Avaliação da capacidade laborativa"),
+    (r"acidente (do|de) trabalho|\bCAT\b|Comunica[çc][ãa]o de Acidente", "Doenças ocupacionais e relacionadas ao trabalho"),
+    (r"\bCID-?1[01]\b|Classifica[çc][ãa]o Internacional de Doen", "Classificação Internacional de Doenças (CID-10/CID-11)"),
+]
+PERICIA_OCUP = (r"doen[çc]a (ocupacional|profissional|do trabalho|relacionada ao trabalho)|\bNR-?\s?0?\d+|Norma Regulamentadora|\bPAIR\b|\bLER\b|\bDORT\b|"
+                r"riscos? ocupacion|\bEPIs?\b|\bEPCs?\b|PCMSO|PPRA|\bPGR\b|insalubr|periculos|sa[úu]de do trabalhador|exposi[çc][ãa]o ocupacional|mapa de risco|ergon[ôo]mic")
+
+def pericia(e, so_nucleo=False):
+    for rx, tema in PERICIA_NUCLEO:
+        if re.search(rx, e, re.I): return "Perícia", tema
+    if not so_nucleo and re.search(PERICIA_OCUP, e, re.I): return "Perícia", "Doenças ocupacionais e relacionadas ao trabalho"
+    return None
+
+MAT = r"tri[âa]ngulo|equa[çc][ãa]o|probabilidade|porcentagem|\bjuros|n[úu]meros? (inteiro|rea|primo|natura)|m[ée]dia aritm|regra de tr[êe]s|racioc[íi]nio l[óo]gico|proposi[çc][ãa]o (simples|composta|l[óo]gica)|tabela-verdade|quadril[áa]tero|\bárea do|sequ[êe]ncia num[ée]rica"
 
 def classifica(q):
     if (q["concurso"], q["cargo"], q["numero"]) in AJUSTE: return AJUSTE[(q["concurso"], q["cargo"], q["numero"])]
     e, n = q["enunciado"], q["numero"]; t = e + " " + " ".join(q["alternativas"].values())
+    if q["concurso"] not in (95, 114, 142):   # demais concursos: classificação por conteúdo
+        r = pericia(e, so_nucleo=True)
+        if r: return r
+        r = legal(e)
+        if r and r[0] != "SUS": return r
+        if r: return r
+        r = pericia(e)
+        if r: return r
+        if has(e, r"Excel|\bWord\b|Windows|planilha|navegador|e-mail|malware|v[íi]rus de computador|senha|backup|nuvem|LibreOffice|PowerPoint|atalho|Linux|internet|computador|software|hardware"): return "Informática", info_sub(t)
+        if has(e, MAT): return "Raciocínio lógico/Matemática", FORA
+        if (q["grupo"] == "Gerais" or q["formato"] == "V/F") and has(e, r"no texto|do texto|o texto|concord[âa]ncia|reg[êe]ncia|crase|pontua[çc][ãa]o|acentu|ora[çc][ãa]o|voc[áa]bulo|pronome|verbo|sentido|trecho|L[íi]ngua Portuguesa|h[íi]fen|vogal|s[íi]laba|sujeito|predicado|ortogr|gram[áa]tic|substantivo|adjetivo|figura de linguagem"): return "Português", port_sub(e)
+        return "Específica (outro cargo)", FORA
     if q["concurso"] in (95, 114):            # 1–10 Port · 11–20 Inf · 21–35 específicas · 36–40 legislação
         if n <= 10: return "Português", port_sub(e)
         if n <= 20: return "Informática", info_sub(t)
@@ -91,8 +131,13 @@ def tipo(e):
 
 def main():
     bruto = [json.loads(l) for l in open(os.path.join(BASE, "data", "historico_bruto.jsonl"), encoding="utf-8")]
-    unicas = []
+    unicas, descartadas, avisos = [], [], []
+    TIT = re.compile(r"\s*(CONHECIMENTOS (GERAIS|ESPEC[ÍI]FICOS)|QUESTÕES DE CONHECIMENTOS).*$")
     for q in bruto:
+        q["enunciado"] = TIT.sub("", q["enunciado"])
+        q["alternativas"] = {k: TIT.sub("", v) for k, v in q["alternativas"].items()}
+        if "".join(sorted(q["alternativas"])) not in ("ABCD", "ABCDE", "FV"):
+            descartadas.append(f"{q['concurso']} {q['cargo']} Q{q['numero']}"); continue
         alts = " ".join(sorted(N(v) for v in q["alternativas"].values()))
         par = None
         for u in unicas:
@@ -100,7 +145,10 @@ def main():
                 par = u; break
         if par:
             par["cargos"].append(f"{q['cargo']} Q{q['numero']}")
-            assert q["anulada"] or par["anulada"] or SequenceMatcher(None, N(par["alternativas"][par["gabarito"]]), N(q["alternativas"][q["gabarito"]])).ratio() > 0.8, (q["cargo"], q["numero"])
+            if not (q["anulada"] or par["anulada"]):
+                a, b = N(par["alternativas"][par["gabarito"]]), N(q["alternativas"][q["gabarito"]])
+                if not (a in b or b in a or SequenceMatcher(None, a, b).ratio() > 0.8):
+                    avisos.append(f"{q['concurso']} {q['cargo']} Q{q['numero']} × {par['cargo']} Q{par['numero']}")
             continue
         q = dict(q, _en=N(q["enunciado"]), _alts=alts, cargos=[f"{q['cargo']} Q{q['numero']}"])
         unicas.append(q)
@@ -115,6 +163,8 @@ def main():
     from collections import Counter
     print(f"historico.jsonl: {len(out)} questões únicas (de {len(bruto)} extraídas)")
     print(Counter(q["disciplina"] for q in out))
+    print("descartadas por extração com defeito:", descartadas)
+    print("gabaritos divergentes entre cargos:", avisos or "nenhum")
 
 if __name__ == "__main__":
     main()

@@ -68,3 +68,21 @@ conjunto de alternativas (≥ 85% de similaridade) e conferência do texto da co
 mais longa 39% (acaso 25%); "exclusivamente" 0 em 188 corretas × 24 erradas; V/F 18%; INCORRETA 0,5%.
 As pistas enfraqueceram em relação ao lote 1 (n maior): o relatório explica.
 **Simulador:** 188 reais. Corrigido: simulado podia montar 49 questões (agrupamento de textos de Português).
+
+## 2026-10-01 · Lote 3: todas as provas de médico da IGEDUC (zip "IGEDUC_medicos_NOVOS")
+
+**Mapa:** o Claude in Chrome varreu os concursos 1–191 da banca (`relatorio/mapa-igeduc.md`). Nenhum concurso anterior
+teve perito médico; Porto Calvo (nº 105) é o primeiro.
+**Coleta:** +43 cadernos de 16 concursos. Total: 21 concursos, 49 cadernos, 2.820 itens, 1.980 únicos.
+**Formatos novos:** V/F (2022–2024: Ingá, Triunfo, Surubim, Pombos, Salgueiro 2024, Cupira) e 5 alternativas
+(2026: Terezinha, Pão de Açúcar, Paulo Afonso, Altos, Terra Nova, Salgueiro 2026), além de 4 alternativas.
+**Correções na extração:** escolha automática entre pdftotext e pdfplumber por coluna (letras espaçadas); itens de
+V/F sem zero à esquerda (Cupira); número no fim de linha engolindo item (Ingá); instruções numeradas da capa
+confundidas com itens 1–4; "X" = anulada (Paraíso do Norte); títulos "CONHECIMENTOS…" grudados em alternativas.
+Descartado: Paraíso do Norte Q44 (alternativas em tabela). Gabaritos divergentes entre cargos: nenhum.
+**Classificação:** regras de conteúdo + revisão manual dos 42 itens marcados como Perícia (7 falsos positivos
+reclassificados → 35 itens). `relatorio/pericia-igeduc.md` lista os 35.
+**Raio-X (n = 886 múltipla escolha + 1.077 V/F):** sem vício de letra (p = 0,71 e 0,83); mais integradora 42%
+(39% no formato A–E, acaso 20%); "exclusivamente" 0 × 88; SUS = 344 itens (bloco mais cobrado).
+**Matriz:** prioridades agora usam a frequência real (Lei 8.080 e APS/ESF no topo).
+**Simulador:** 1.963 itens reais (4, 5 alternativas e V/F); filtro por disciplina inclui Perícia (35 reais).
