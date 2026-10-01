@@ -41,3 +41,17 @@ Sobre a Facuvale:
 
 ## Quando matricular
 Ver a recomendação no [README](README.md).
+
+## Verificação MEC (01/10/2026)
+O e-MEC não abre do ambiente do Claude (bloqueio de rede). O que se apurou por busca:
+- A página do curso da Facuvale cita a **Portaria EAD nº 1.640/2019**, que é da **Faculdade Iguaçu**. A Facuvale ("Faculdade de Minas EAD") é marca/polo comercial. **Quem emite o certificado tem que ser a Faculdade Iguaçu.**
+- ✅ Faculdade Iguaçu: credenciamento EAD pela Portaria 1.640, de 19/09/2019.
+- ⚠️ Faculdade Iguaçu tem **ocorrência de regulação no e-MEC** (despacho de saneamento/medidas cautelares: sobrestamento de processos, vedação de novos processos, **limitação de novos ingressos**).
+- ⚠️ Reclame Aqui (2022): queixa de que a "Facuvale/Faculdade de Minas" não constava no e-MEC para pós.
+- Existe também uma "Faculdade Vale do Aço" (Portaria 198/2024), que é outra IES. Não confundir.
+
+### Checagem decisiva (feita pela Victoria, ~5 min)
+1. emec.mec.gov.br → **Consulta Avançada** → Buscar por **Instituição** → "Faculdade Iguaçu" → abrir → conferir **Situação: Ativa** e o credenciamento **EAD**. Abrir a aba de **ocorrências/medidas cautelares** e ver se há **suspensão de ingresso em EAD/pós**.
+2. Mesma tela → Buscar por **Curso de Especialização** → nome "**Perícia Médica**" → conferir se aparece um curso da **Faculdade Iguaçu** (os cursos lato sensu precisam estar cadastrados no e-MEC).
+3. Se a Iguaçu estiver ativa, sem bloqueio de ingresso, e o curso "Perícia Médica" aparecer → pode pagar.
+4. Se houver bloqueio de ingresso ou o curso não aparecer → **não pagar**; partir para outra IES cujo curso apareça no cadastro de especializações do e-MEC.
