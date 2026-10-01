@@ -61,4 +61,6 @@ O e-MEC não abre do ambiente do Claude (bloqueio de rede). O que se apurou por 
 - Ocorrências: medida cautelar em 27/06/2013, **revogada** em 06/01/2014 e 16/03/2015 → **nenhuma cautelar vigente** ✅ (o alerta anterior era histórico)
 - Atos recentes: Portarias **220 e 223, de 12/06/2026** (prorrogação de ato, validade vinculada ao ciclo avaliativo) + criação de polos EaD → credenciamento em dia ✅
 - Índices: IGC **2** · CI **4** · CI-EaD **3** → qualidade modesta (IGC 2 é abaixo do satisfatório), mas **não afeta a validade do certificado**
-- ⏳ Falta: aba **ESPECIALIZAÇÃO** → confirmar que "Perícia Médica" está cadastrado
+- ✅ Aba ESPECIALIZAÇÃO: **"PERÍCIA MÉDICA"** e **"PERÍCIA MÉDICA (360h)"** cadastrados para a Faculdade Iguaçu. O segundo é exatamente o curso vendido pela Facuvale.
+
+### ✅ VEREDITO: Facuvale / Faculdade Iguaçu APROVADA. Pagar no Pix ou no cartão (nunca no boleto parcelado).
