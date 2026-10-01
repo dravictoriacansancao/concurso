@@ -34,7 +34,13 @@ O termo é vago: pode ser só a própria especialização/CRM ou pode significar
 
 </details>
 
-## Títulos: impacto da falta de pós
+## Títulos: usar a pós em PSIQUIATRIA (custo zero)
+- A pós em Psiquiatria **não é o requisito do cargo**, então a regra do item 4.3.3.3 não a exclui. Vale até **+1 pt**.
+- Ponto de atenção: o edital exige "área estrita e claramente relacionada com o cargo" (4.3.2). Argumento: o Anexo II cobra **"Avaliação pericial em doenças psiquiátricas"**, e o cargo avalia capacidade laborativa, em que os transtornos mentais são causa frequente de afastamento.
+- Enviar **certificado** (ou **declaração de conclusão + histórico**) + uma **justificativa curta** da relação com o cargo (item 4.3.4).
+- Envio: 05–08/12/2026 · Recurso: 16–19/12/2026, se não pontuar.
+
+## Títulos: impacto da falta de pós (cenário sem a psiquiatria)
 - Até 08/12/2026 você não terá título concluído → **0 ponto em títulos** (máx. 1 pt para uma especialização).
 - A nota de títulos é o **2º critério de desempate**. Numa vaga única, isso importa: a compensação vem da prova.
 - O 3º critério de desempate é a **nota em Conhecimentos Profissionais**. Essa é a disciplina para gabaritar.
