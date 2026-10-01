@@ -255,6 +255,7 @@ function montarSimulado() {
     if (d[0] === "Português") { // mantém questões do mesmo texto juntas
       var grupos = {}; pool.forEach(function (q) { var k = q.texto || q.id; (grupos[k] = grupos[k] || []).push(q); });
       var sel = []; shuffle(Object.keys(grupos)).forEach(function (k) { if (sel.length + grupos[k].length <= d[1]) sel = sel.concat(grupos[k]); });
+      shuffle(pool).forEach(function (q) { if (sel.length < d[1] && sel.indexOf(q) < 0) sel.push(q); }); // completa as vagas
       qs = qs.concat(sel);
     } else qs = qs.concat(shuffle(pool).slice(0, d[1]));
   });
@@ -387,7 +388,7 @@ function viewChute() {
   var acc = S.chute.length ? S.chute.filter(function (x) { return x; }).length / S.chute.length : NaN;
   var poolCh = BANCO.filter(function (q) { return q.comando === "CORRETA" && (q.real ? CH_REAIS : !CH_REAIS); });
   var q = CH || (CH = shuffle(poolCh)[0]);
-  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Nas provas reais (4 alternativas) o acaso é 25%: lá, a correta foi a mais longa em 43% das questões e nenhuma correta trouxe 'exclusivamente' ou 'sempre'. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p><label class=\"chk\"><input type=\"checkbox\" id=\"chR\"" + (CH_REAIS ? " checked" : "") + "> Usar questões de provas reais</label></div>" +
+  app.innerHTML = "<div class=\"sheet\"><h2>Treino de chute</h2><p class=\"muted\">Só as alternativas, sem o enunciado. Escolha a mais provável pelas pistas da banca: desconfie de absolutos (exclusivamente, apenas, sempre, dispensa) e prefira a afirmação equilibrada e completa. Nas provas reais (4 alternativas) o acaso é 25%: em 188 questões, a mais completa e sem absolutos acertou 42–44%, e nenhuma correta trouxe 'exclusivamente', 'sempre' ou 'suficiente'. Seu acerto: <b>" + pct(acc) + "</b> em " + S.chute.length + " tentativas.</p><label class=\"chk\"><input type=\"checkbox\" id=\"chR\"" + (CH_REAIS ? " checked" : "") + "> Usar questões de provas reais</label></div>" +
     "<div class=\"sheet\" id=\"qs\">" + qHTML(q, { semEnunciado: true }) + "</div><div class=\"nav\"><span></span><button class=\"btn primary\" id=\"next\" disabled>Próxima</button></div>";
   $("#qs").querySelectorAll(".alt").forEach(function (b) { b.onclick = function () {
     var ok = reveal($("#qs"), q, b.dataset.l, { marcar: true }); S.chute.push(ok); save();

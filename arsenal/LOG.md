@@ -54,3 +54,17 @@ Simulado continua só com inéditas, no formato de 5 alternativas). Teste no Chr
 
 **Observação para os próximos lotes de inéditas:** a banca real TEM o padrão "correta mais longa/completa".
 O lote 1 foi neutralizado de propósito (16%). Decidir se os próximos lotes devem reproduzir o padrão real.
+
+## 2026-10-01 · Lote 2 de provas reais (zip "Arquivo 2")
+
+**Coleta:** 13 cadernos separados + 3 gabaritos definitivos oficiais (concursos 95, 114, 142). Os PDFs
+"caderno+gabarito" antigos foram substituídos pelos cadernos limpos; o gabarito agora vem sempre do PDF oficial.
+**Extração:** 460 questões; limpeza de rodapé ("CARGO - 1") e da marca d'água de Cabo ("RASCUNHO / PREFEITURA…").
+**Deduplicação:** mesma questão aparece em vários cargos com alternativas embaralhadas → comparação por enunciado +
+conjunto de alternativas (≥ 85% de similaridade) e conferência do texto da correta: 0 conflitos. 192 únicas, 4 anuladas.
+**Classificação:** por estrutura da prova (95/114: 1–10 Port, 11–20 Inf, 21–35 específicas, 36–40 legislação;
+142: só gerais) + regras de conteúdo + 8 ajustes manuais após revisão.
+**Raio-X atualizado (n = 188):** sem vício de letra (p = 0,53); mais integradora 44%, menos absolutos 42%,
+mais longa 39% (acaso 25%); "exclusivamente" 0 em 188 corretas × 24 erradas; V/F 18%; INCORRETA 0,5%.
+As pistas enfraqueceram em relação ao lote 1 (n maior): o relatório explica.
+**Simulador:** 188 reais. Corrigido: simulado podia montar 49 questões (agrupamento de textos de Português).

@@ -73,7 +73,7 @@ def elimina_abs_esperado(qs):
         tot += (1 / len(rest)) if q["gabarito"] in rest else 0
     return tot
 grupos = {"todas": None, "Gerais (Port/Const/Inf)": lambda q: q["disciplina"] in ("Português", "Constitucional", "Informática"),
-          "SUS + Clínica": lambda q: q["disciplina"] in ("SUS", "Clínica (outro cargo)"),
+          "SUS + específicas de saúde": lambda q: q["disciplina"] in ("SUS", "Específica (outro cargo)"),
           "'mais correta e completa'": lambda q: "complet" in q["enunciado"].lower()}
 R["heuristicas"] = []
 for gn, g in grupos.items():
